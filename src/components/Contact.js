@@ -72,6 +72,7 @@ const Contact = () => {
                       type="email"
                       value={formDetails.email}
                       placeholder="Email"
+                      required
                       onChange={(e) => onUpdateForm('email', e.target.value)}
                     />
                   </Col>
@@ -89,6 +90,7 @@ const Contact = () => {
                       type="text"
                       value={formDetails.message}
                       placeholder="Message"
+                      required
                       onChange={(e) => onUpdateForm('message', e.target.value)}
                     />
                     <button type="sumbit">

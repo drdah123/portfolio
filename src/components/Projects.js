@@ -82,10 +82,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">Full stack</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">React native</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="forth">Web3</Nav.Link>
+                  <Nav.Link eventKey="third">Web3</Nav.Link>
                 </Nav.Item>
               </Nav>
               <TrackVisibility>
