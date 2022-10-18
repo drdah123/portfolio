@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { Col, Container, Nav, Row } from 'react-bootstrap';
+import {
+  ArrowDown,
+  ArrowDownCircle,
+  ArrowRightCircle,
+} from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -58,7 +62,7 @@ export const Banner = () => {
                 >
                   <span className="tagline">welcom to my protfolio</span>
                   <h1>
-                    {`Hi i am abdalrahman`} <span className="wrap">{text}</span>
+                    {`Hi I am abdalrahman`} <span className="wrap">{text}</span>
                   </h1>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -67,10 +71,9 @@ export const Banner = () => {
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
                   </p>
-                  <button onClick={() => console.log('connect')}>
-                    {' '}
-                    lets connect <ArrowRightCircle size={25} />
-                  </button>
+                  <a href="#connect" className="lets-connect">
+                    lets connect <ArrowDown color="#753aa2" size={29} />
+                  </a>
                 </div>
               )}
             </TrackVisibility>

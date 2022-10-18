@@ -1,51 +1,20 @@
 import React from 'react';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
+import MernLogo from '../assets/img2/pngaaa.com-7365622.png';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import colorSharp2 from '../assets/img/color-sharp.png';
 import TrackVisibility from 'react-on-screen';
-import amazona from '../assets/img2/amazona.jpg';
-import medicalChat from '../assets/img2/medical-chat.jpg';
-import noteApp from '../assets/img2/note-app.jpg';
+import {
+  faCss3,
+  faGitAlt,
+  faHtml5,
+  faJsSquare,
+  faReact,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { projectsFrontend, projectsFullStack } from '../assets/data';
 
 export const Projects = () => {
-  const projects = [
-    {
-      name: 'Amazona-clone',
-      imgUrl: amazona,
-      description: 'Full stack Ecommerce',
-      appUrl: 'https://mern-amazona.onrender.com/',
-    },
-    {
-      name: 'Medical page',
-      imgUrl: medicalChat,
-      description: 'Full medical Page has real time chating',
-      appUrl: 'https://medical-pager-chatt.netlify.app/',
-    },
-    {
-      name: 'Note-app',
-      imgUrl: noteApp,
-      description: 'Full stack note app',
-      appUrl: 'https://note-frontend-cy93.onrender.com/',
-    },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg1,
-    },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg2,
-    },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg3,
-    },
-  ];
   return (
     <section className="project" id="project">
       <Container>
@@ -66,6 +35,28 @@ export const Projects = () => {
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
                   </p>
+                  <div className="cubespinner-container">
+                    <div className="cubespinner">
+                      <div className="face1">
+                        <FontAwesomeIcon icon={faGitAlt} color="#DD0031" />
+                      </div>
+                      <div className="face2">
+                        <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                      </div>
+                      <div className="face3">
+                        <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                      </div>
+                      <div className="face4">
+                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                      </div>
+                      <div className="face5">
+                        <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+                      </div>
+                      <div className="face6">
+                        <img src={MernLogo} alt="mern-logo" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </TrackVisibility>
@@ -95,12 +86,19 @@ export const Projects = () => {
                   >
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {projects.map((project, index) => {
+                        {projectsFrontend.map((project, index) => {
                           return <ProjectCard key={index} {...project} />;
                         })}
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="second">loren Ipusm</Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      {' '}
+                      <Row>
+                        {projectsFullStack.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })}
+                      </Row>
+                    </Tab.Pane>
                     <Tab.Pane eventKey="third">loren Ipusm</Tab.Pane>
                   </Tab.Content>
                 )}
