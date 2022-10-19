@@ -51,7 +51,7 @@ const Skills = () => {
                 className="skill-slider scroller"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter3} alt="Image" />
                   <h5>web devolepment</h5>
                 </div>
                 <div className="item">
@@ -59,8 +59,8 @@ const Skills = () => {
                   <h5>Full stack</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
-                  <h5>Logo design</h5>
+                  <img src={meter2} alt="Image" />
+                  <h5>algorithm</h5>
                 </div>
               </Carousel>
             </div>

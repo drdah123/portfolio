@@ -125,6 +125,12 @@ nav.navbar a.navbar-brand {
   width: 9%;
 }
 
+.logo {
+  color: white;
+  font-weight: 800;
+  font-size: 2.3rem;
+}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -517,6 +523,8 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 
 .nav-link#projects-tabs-tab-second {
+  padding-top: 5px;
+  height: 3.6rem;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -762,6 +770,16 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .new-email-bx {
+    left: -100px;
+  }
+  nav.navbar {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 .new-email-bx::before {
   content: '';
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
@@ -859,6 +877,19 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   top: -20%;
   left: 10%;
 }
+@media (max-width: 500px) {
+  .cubespinner-container {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .project p {
+    margin-bottom: 300px;
+  }
+}
 
 .cubespinner {
   position: absolute;
@@ -882,12 +913,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 20px lightyellow;
-}
-
-@media (max-width: 400) {
-  .face6 img {
-    /* width: 900px !important; */
-  }
 }
 
 .face1 {
