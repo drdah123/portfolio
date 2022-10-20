@@ -5,13 +5,14 @@ import meoryGame from './img2/memoy-game.jpg';
 import quizApp from './img2/quiz-app.jpg';
 import weatherApp from './img2/weather app.jpg';
 import dashboard from './img2/dashboard.jpg';
+import protfolioanimation from './img2/protofolio-animation.jpg';
 
 export const projectsFrontend = [
   {
-    name: 'Weather App',
+    title: 'Weather App',
     imgUrl: weatherApp,
-    description: '',
-    appUrl: 'https://inquisitive-naiad-78459a.netlify.app/',
+    description: 'simple weather app with rapidAPI',
+    appUrl: 'https://weeatherapp0.netlify.app/',
   },
   {
     title: 'Dashboard',
@@ -21,7 +22,7 @@ export const projectsFrontend = [
   },
   {
     title: 'Quiz app',
-    description: '',
+    description: 'simple quiz app with rapidAPI',
     imgUrl: quizApp,
     appUrl: 'https://quiz-abdalrahman.onrender.com/',
   },
@@ -31,6 +32,13 @@ export const projectsFrontend = [
     imgUrl: meoryGame,
     appUrl: 'https://meory-game-abdlarahman.onrender.com/',
   },
+  {
+    title: 'Protofolio',
+    description: 'Site with animation',
+    imgUrl: protfolioanimation,
+    appUrl: 'https://protfolioanimations.netlify.app/',
+  },
+  // https://protfolioanimations.netlify.app/
 ];
 
 export const projectsFullStack = [

@@ -109,7 +109,7 @@ nav.navbar {
   nav.navbar {
     padding: 18px 0;
     position: fixed;
-    width: 90%;
+    width: 100%;
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
@@ -195,9 +195,10 @@ span.navbar-text {
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
-.navbar-text button {
+.vvd {
   font-weight: 700;
-  color: #fff;
+  color: #fff !important;
+  text-decoration: none;
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
@@ -523,8 +524,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 
 .nav-link#projects-tabs-tab-second {
-  padding-top: 5px;
-  height: 3.6rem;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -775,7 +774,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
     left: -100px;
   }
   nav.navbar {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 }

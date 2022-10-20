@@ -6,7 +6,7 @@ const MailchimpFrom = () => {
   const postUrl = `${process.env.React_MAILCHIMP_URL}?u=${process.env.React_MAILCHIMP_U}$id=${process.env.React_MAILCHIMP_ID}`;
   return (
     <>
-      <div id="connect">
+      <div>
         <MailchimpSubscribe
           url={postUrl}
           render={({ subscribe, status, message }) => (

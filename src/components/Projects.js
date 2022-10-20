@@ -99,7 +99,12 @@ export const Projects = () => {
                         })}
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">loren Ipusm</Tab.Pane>
+                    <Tab.Pane
+                      eventKey="third"
+                      className="d-flex align-items-center justify-content-center"
+                    >
+                      <h3>if god say it It will coming close...</h3>
+                    </Tab.Pane>
                   </Tab.Content>
                 )}
               </TrackVisibility>

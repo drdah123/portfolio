@@ -43,13 +43,12 @@ const Contact = () => {
         },
         (err) => {
           alert('your message does not send, please try again');
-          console.log(err.text);
         }
       );
   };
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="connect">
       <Container>
         <Row>
           <Col md={6}>
