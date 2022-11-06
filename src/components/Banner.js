@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Col, Container, Nav, Row } from 'react-bootstrap';
-import {
-  ArrowDown,
-  ArrowDownCircle,
-  ArrowRightCircle,
-} from 'react-bootstrap-icons';
+import { Col, Container, Row } from 'react-bootstrap';
+import { ArrowDown } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';

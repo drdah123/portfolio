@@ -6,24 +6,9 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const formRef = useRef();
 
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-  };
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('send');
-  const [status, setStatus] = useState({});
   const [isSent, setIsSent] = useState(false);
 
-  const onUpdateForm = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
-  };
   const sendEmail = (e) => {
     e.preventDefault();
 
