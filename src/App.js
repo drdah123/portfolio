@@ -5,19 +5,21 @@ import { Banner } from './components/Banner';
 import { Projects } from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <div className="App">
+      <BrowserRouter>
         <NavBar />
-        <Banner />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
+        <Routes>
+          <Route path="/" element={<Banner />} />
+          <Route path="/skill" element={<Skills />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

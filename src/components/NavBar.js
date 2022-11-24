@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon2 from '../assets/img/nav-icon2.png';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('Home');
@@ -29,9 +28,12 @@ export const NavBar = () => {
   return (
     <Navbar expand="lg" className={scrolled ? 'scrolled ' : ''}>
       <Container>
-        <Navbar.Brand herf="/">
-          {/* <img src={logo} alt="logo" className="logo" /> */}
-          <h1 className="logo">Abdalrahman</h1>
+        <Navbar.Brand>
+          <h1>
+            <a href="/" className="nav.navbar navbar-brand">
+              Abdalrahman
+            </a>
+          </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -39,16 +41,7 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#home"
-              className={
-                activeLink === 'Home' ? 'active navbar-link' : 'navbar-link'
-              }
-              onClick={() => onUpdateActiveLink('Home')}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
+              href="/skill"
               className={
                 activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
               }
@@ -57,7 +50,7 @@ export const NavBar = () => {
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#project"
+              href="/project"
               className={
                 activeLink === 'Project' ? 'active navbar-link' : 'navbar-link'
               }
@@ -68,17 +61,22 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a>
-                <img herf="#" src={navIcon1} alt="" />
+              <a
+                href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={navIcon1} alt="" />
               </a>
-              <a>
-                <img herf="#" src={navIcon2} alt="" />
-              </a>
-              <a>
-                <img herf="#" src={navIcon3} alt="" />
+              <a
+                href="https://github.com/drdah123"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={navIcon2} alt="" />
               </a>
             </div>
-            <a className="vvd" href="#connect">
+            <a className="vvd" href="/contact">
               <span>lets connect</span>
             </a>
           </span>
