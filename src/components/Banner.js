@@ -6,6 +6,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import BannerText from './BannerText';
 import Stars from './Stars';
+import { Link } from 'react-router-dom';
 
 export const Banner = () => {
   const [text, setText] = useState('');
@@ -52,9 +53,9 @@ export const Banner = () => {
                       speed={50}
                     />
                   </p>
-                  <a href="/contact" className="lets-connect">
+                  <Link href="/contact" className="lets-connect">
                     lets connect <ArrowDown color="#753aa2" size={29} />
-                  </a>
+                  </Link>
                 </div>
               )}
             </TrackVisibility>

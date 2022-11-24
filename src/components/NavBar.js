@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.png';
 
@@ -30,9 +31,9 @@ export const NavBar = () => {
       <Container>
         <Navbar.Brand>
           <h1>
-            <a href="/" className="nav.navbar navbar-brand">
+            <Link href="/" className="nav.navbar navbar-brand">
               Abdalrahman
-            </a>
+            </Link>
           </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -61,24 +62,24 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a
+              <Link
                 href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon1} alt="" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://github.com/drdah123"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon2} alt="" />
-              </a>
+              </Link>
             </div>
-            <a className="vvd" href="/contact">
+            <Link className="vvd" href="/contact">
               <span>lets connect</span>
-            </a>
+            </Link>
           </span>
         </Navbar.Collapse>
       </Container>
