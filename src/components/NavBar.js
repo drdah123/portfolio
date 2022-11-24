@@ -31,7 +31,7 @@ export const NavBar = () => {
       <Container>
         <Navbar.Brand>
           <h1>
-            <Link href="/" className="nav.navbar navbar-brand">
+            <Link to="/" className="nav.navbar navbar-brand">
               Abdalrahman
             </Link>
           </h1>
@@ -63,21 +63,21 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <Link
-                href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
+                to="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon1} alt="" />
               </Link>
               <Link
-                href="https://github.com/drdah123"
+                to="https://github.com/drdah123"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon2} alt="" />
               </Link>
             </div>
-            <Link className="vvd" href="/contact">
+            <Link className="vvd" to="/contact">
               <span>lets connect</span>
             </Link>
           </span>

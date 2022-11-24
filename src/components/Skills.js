@@ -25,14 +25,14 @@ const Skills = () => {
             <Row>
               {SkillsData.map((skill) => {
                 return (
-                  <>
+                  <React.Fragment key={skill.name}>
                     <SkillsProject
                       {...skill}
                       text={text}
                       setText={setText}
                       comingRotate={comingRotate}
                     />
-                  </>
+                  </React.Fragment>
                 );
               })}
             </Row>

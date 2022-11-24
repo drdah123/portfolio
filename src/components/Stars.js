@@ -2,14 +2,17 @@ import React, { useEffect } from 'react';
 
 const Stars = ({ small, background }) => {
   useEffect(() => {
-    const cursorStars = document.querySelector('.small-night');
-    const cursor = (e) => {
-      cursorStars.style.top = e.pageY + 'px';
-      cursorStars.style.left = e.pageX + 'px';
-    };
-    window.addEventListener('mousemove', cursor);
-    return () => window.removeEventListener('mousemove', cursor);
+    if (small) {
+      const cursorStars = document.querySelector('.small-night');
+      const cursor = (e) => {
+        cursorStars.style.top = e.pageY + 'px';
+        cursorStars.style.left = e.pageX + 'px';
+      };
+      window.addEventListener('mousemove', cursor);
+      return () => window.removeEventListener('mousemove', cursor);
+    }
   }, []);
+
   return (
     <>
       {!background ? (

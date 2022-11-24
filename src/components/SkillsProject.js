@@ -4,7 +4,7 @@ import BannerText from './BannerText';
 
 const SkillsProject = ({ name, text, setText, comingRotate, rate }) => {
   return (
-    <Col key={name} xl={6} md={6}>
+    <Col xl={6} md={6}>
       <div className="skill-container">
         <p className="skill-name">{name}</p>
         <div className="progress-container">

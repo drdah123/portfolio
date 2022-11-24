@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowDown } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
@@ -53,7 +53,7 @@ export const Banner = () => {
                       speed={50}
                     />
                   </p>
-                  <Link href="/contact" className="lets-connect">
+                  <Link to="/contact" className="lets-connect">
                     lets connect <ArrowDown color="#753aa2" size={29} />
                   </Link>
                 </div>
