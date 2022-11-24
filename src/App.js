@@ -5,8 +5,7 @@ import { Banner } from './components/Banner';
 import { Projects } from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import { BrowserRouter, Routes } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
