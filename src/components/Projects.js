@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
-import colorSharp2 from '../assets/img/color-sharp.png';
 import TrackVisibility from 'react-on-screen';
 import Stars from './Stars';
 
@@ -48,15 +47,11 @@ export const Projects = () => {
                       isVisible ? 'animate__animated animate__slideInUp' : ''
                     }
                   >
-                    {tabKeys.map((key, i) => (
+                    {tabKeys.map((key) => (
                       <Tab.Pane
                         eventKey={key.key}
                         key={key.key}
-                        className={
-                          i >= 2
-                            ? 'd-flex align-items-center justify-content-center'
-                            : ''
-                        }
+                        className="d-flex align-items-center justify-content-center"
                       >
                         {key.component ? (
                           key.component
