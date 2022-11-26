@@ -22,50 +22,52 @@ export const Banner = () => {
   ];
 
   return (
-    <section className="banner" id="home">
-      <Stars />
-      <Stars background />
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? 'animate__animated animate__fadeIn' : ''
-                  }
-                >
-                  <span className="tagline">Welcome to my portfolio </span>
-                  <h1>
-                    {`Hey I am abdalrahman`}{' '}
-                    <span className="wrap">
+    <div className="banner">
+      <section id="home">
+        <Stars />
+        <Stars background />
+        <Container>
+          <Row className="align-items-center">
+            <Col xs={12} md={6} xl={7}>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? 'animate__animated animate__fadeIn' : ''
+                    }
+                  >
+                    <span className="tagline">Welcome to my portfolio </span>
+                    <h1>
+                      {`Hey I am abdalrahman`}{' '}
+                      <span className="wrap">
+                        <BannerText
+                          toRotate={headRotate}
+                          text={text}
+                          setText={setText}
+                        />
+                      </span>
+                    </h1>
+                    <p>
                       <BannerText
-                        toRotate={headRotate}
-                        text={text}
-                        setText={setText}
+                        toRotate={cvRotate}
+                        text={textCv}
+                        setText={setTextCv}
+                        speed={50}
                       />
-                    </span>
-                  </h1>
-                  <p>
-                    <BannerText
-                      toRotate={cvRotate}
-                      text={textCv}
-                      setText={setTextCv}
-                      speed={50}
-                    />
-                  </p>
-                  <Link to="/contact" className="lets-connect">
-                    lets connect <ArrowDown color="#753aa2" size={29} />
-                  </Link>
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={7}>
-            <img src={headerImg} alt="Header Img" />
-          </Col>
-        </Row>
-      </Container>
-    </section>
+                    </p>
+                    <Link to="/contact" className="lets-connect">
+                      lets connect <ArrowDown color="#753aa2" size={29} />
+                    </Link>
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
+            <Col xs={12} md={6} xl={7}>
+              <img src={headerImg} alt="Header Img" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </div>
   );
 };

@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.png';
+import logoA from '../assets/img2/logoNavbar2.png';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('Home');
@@ -32,7 +33,7 @@ export const NavBar = () => {
         <Navbar.Brand>
           <h1>
             <Link to="/" className="nav.navbar navbar-brand">
-              Abdalrahman
+              <img src={logoA} />
             </Link>
           </h1>
         </Navbar.Brand>
