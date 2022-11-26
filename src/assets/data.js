@@ -11,6 +11,7 @@ import yuotubeClone from './img2/youtube clone.jpg';
 import calendar from './img2/calendar.jpg';
 import ecommerceNext from './img2/ecommerce-sanity-nextjs.jpg';
 import twitterC from './img2/twitter-clone.jpg';
+import CarouselProjects from '../components/CarouselProjects';
 
 export const projectsFrontend = [
   {
@@ -140,4 +141,33 @@ export const SkillsData = [
   { name: 'TENSORFLOW JS', rate: 0 },
   { name: 'ALGORITHM JS', rate: 0 },
   { name: 'GIT', rate: 50 },
+];
+
+export const tabKeys = [
+  {
+    key: 'first',
+    title: 'Frontend',
+    component: <CarouselProjects projects={projectsFrontend} />,
+  },
+  {
+    key: 'second',
+    title: 'Full stack',
+    component: <CarouselProjects projects={projectsFullStack} />,
+  },
+  {
+    key: 'third',
+    title: 'Web3',
+  },
+  {
+    key: 'forth',
+    title: 'UI UX design',
+  },
+  {
+    key: 'fifth',
+    title: 'React games',
+  },
+  {
+    key: 'sixth',
+    title: 'React native',
+  },
 ];

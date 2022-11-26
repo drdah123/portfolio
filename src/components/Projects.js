@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
-import ProjectCard from './ProjectCard';
 import colorSharp2 from '../assets/img/color-sharp.png';
 import TrackVisibility from 'react-on-screen';
+import Stars from './Stars';
 
-import { projectsFrontend, projectsFullStack } from '../assets/data';
+import { tabKeys } from '../assets/data';
 import BannerText from './BannerText';
-import CarouselProjects from './CarouselProjects';
 
 export const Projects = () => {
   const [text, setText] = useState('');
@@ -14,6 +13,7 @@ export const Projects = () => {
 
   return (
     <section className="project" id="project">
+      <Stars background />
       <Container>
         <Row>
           <Col>
@@ -34,24 +34,11 @@ export const Projects = () => {
                 defaultActiveKey="/home"
                 className="nav-pills mb-5 justify-content-center align-items-center"
               >
-                <Nav.Item>
-                  <Nav.Link eventKey="first">Frontend</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Full stack</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Web3</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="forth">UI UX design</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="fifth">React games</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="sixth">React native</Nav.Link>
-                </Nav.Item>
+                {tabKeys.map((key, i) => (
+                  <Nav.Item key={i}>
+                    <Nav.Link eventKey={key.key}>{key.title}</Nav.Link>
+                  </Nav.Item>
+                ))}
               </Nav>
               <TrackVisibility>
                 {({ isVisible }) => (
@@ -61,64 +48,30 @@ export const Projects = () => {
                       isVisible ? 'animate__animated animate__slideInUp' : ''
                     }
                   >
-                    <Tab.Pane eventKey="first">
-                      <CarouselProjects projects={projectsFrontend} />
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <CarouselProjects projects={projectsFullStack} />
-                    </Tab.Pane>
-                    <Tab.Pane
-                      eventKey="third"
-                      className="d-flex align-items-center justify-content-center"
-                    >
-                      <h3>
-                        <BannerText
-                          text={text}
-                          setText={setText}
-                          toRotate={comingRotate}
-                          emptyContent
-                        />
-                      </h3>
-                    </Tab.Pane>
-                    <Tab.Pane
-                      eventKey="forth"
-                      className="d-flex align-items-center justify-content-center"
-                    >
-                      <h3>
-                        <BannerText
-                          text={text}
-                          setText={setText}
-                          toRotate={comingRotate}
-                          emptyContent
-                        />
-                      </h3>
-                    </Tab.Pane>
-                    <Tab.Pane
-                      eventKey="fifth"
-                      className="d-flex align-items-center justify-content-center"
-                    >
-                      <h3>
-                        <BannerText
-                          text={text}
-                          setText={setText}
-                          toRotate={comingRotate}
-                          emptyContent
-                        />
-                      </h3>
-                    </Tab.Pane>
-                    <Tab.Pane
-                      eventKey="sixth"
-                      className="d-flex align-items-center justify-content-center"
-                    >
-                      <h3>
-                        <BannerText
-                          text={text}
-                          setText={setText}
-                          toRotate={comingRotate}
-                          emptyContent
-                        />
-                      </h3>
-                    </Tab.Pane>
+                    {tabKeys.map((key, i) => (
+                      <Tab.Pane
+                        eventKey={key.key}
+                        key={key.key}
+                        className={
+                          i >= 2
+                            ? 'd-flex align-items-center justify-content-center'
+                            : ''
+                        }
+                      >
+                        {key.component ? (
+                          key.component
+                        ) : (
+                          <h3>
+                            <BannerText
+                              text={text}
+                              setText={setText}
+                              toRotate={comingRotate}
+                              emptyContent
+                            />
+                          </h3>
+                        )}
+                      </Tab.Pane>
+                    ))}
                   </Tab.Content>
                 )}
               </TrackVisibility>
@@ -126,7 +79,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="" />
     </section>
   );
 };

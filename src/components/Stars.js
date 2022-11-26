@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 
-const Stars = ({ small, background }) => {
+const Stars = ({ background }) => {
   useEffect(() => {
-    if (small) {
+    if (!background) {
       const cursorStars = document.querySelector('.small-night');
       const cursor = (e) => {
         cursorStars.style.top = e.pageY + 'px';
