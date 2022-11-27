@@ -122,7 +122,7 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 
-nav.navbar .navbar-nav .nav-link.navbar-link {
+nav.navbar .navbar-nav .nav-link.navbar-link a {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
@@ -130,9 +130,11 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 18px;
   opacity: 0.75;
   align-self: flex-end;
+  text-decoration: none;
+  border: 0;
 }
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover a,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active a {
   opacity: 1;
 }
 

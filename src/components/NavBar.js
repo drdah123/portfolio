@@ -32,8 +32,12 @@ export const NavBar = () => {
       <Container>
         <Navbar.Brand>
           <h1>
-            <Link to="/" className="nav.navbar navbar-brand">
-              <img src={logoA} />
+            <Link
+              to="/"
+              className="nav.navbar navbar-brand"
+              onClick={() => onUpdateActiveLink('Home')}
+            >
+              <img src={logoA} alt="" />
             </Link>
           </h1>
         </Navbar.Brand>
@@ -43,22 +47,20 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="/skill"
               className={
                 activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
               }
               onClick={() => onUpdateActiveLink('Skills')}
             >
-              Skills
+              <Link to="/skill">Skills</Link>
             </Nav.Link>
             <Nav.Link
-              href="/project"
               className={
                 activeLink === 'Project' ? 'active navbar-link' : 'navbar-link'
               }
               onClick={() => onUpdateActiveLink('Project')}
             >
-              Project
+              <Link to="/project">Project</Link>
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
