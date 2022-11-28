@@ -65,20 +65,20 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <Link
-                to="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
+              <a
+                href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon1} alt="" />
-              </Link>
-              <Link
-                to="https://github.com/drdah123"
+              </a>
+              <a
+                href="https://github.com/drdah123"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={navIcon2} alt="" />
-              </Link>
+              </a>
             </div>
             <Link className="vvd" to="/contact">
               <span>lets connect</span>
