@@ -34,7 +34,7 @@ export const NavBar = () => {
           <h1>
             <Link
               to="/"
-              className="nav.navbar navbar-brand"
+              className="navbar navbar-brand"
               onClick={() => onUpdateActiveLink('Home')}
             >
               <img src={logoA} alt="" />

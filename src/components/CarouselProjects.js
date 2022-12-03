@@ -21,11 +21,11 @@ const CarouselProjects = ({ projects }) => {
         breakpoints={{
           300: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           1020: {
             slidesPerView: 3,

@@ -104,7 +104,7 @@ nav.navbar {
   transition: 0.32s ease-in-out;
 }
 nav.navbar .navbar-brand {
-  width: 20%;
+  width: auto;
   margin-right: 40px;
 }
 
@@ -899,6 +899,11 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   color: #fffcfc;
 }
 
+@media (max-width: 560px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+}
 .banner p {
   color: #dadada;
   font-size: 1rem;
@@ -1037,12 +1042,14 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   .cubespinner div {
     height: 50px;
   }
-  .logo {
-    font-size: 25px;
-  }
+
   .project p {
     margin-bottom: 300px;
   }
+}
+
+.swiper-grid {
+  margin-top: -10px;
 }
 
 .cubespinner {
@@ -1165,12 +1172,16 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   margin: 0 5%;
   padding: 5% 0;
 }
+
+@media (max-width: 560px) {
+  .project-carousel .mySwiper {
+    height: 85vh;
+  }
+}
 .mySwiper .swiper-pagination span {
-  /* top: 75% !important; */
   background-color: #753aa2;
 }
 .mySwiper .swiper-pagination {
-  /* top: 75% !important; */
   background-color: lightgray;
 }
 .mySwiper .swiper-slide {
