@@ -311,8 +311,11 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   width: 75%;
   height: 100%;
   transform: rotate(-45deg);
-
-  /* overflow: hidden; */
+}
+@media (max-width: 560px) {
+  .stars {
+    top: 30%;
+  }
 }
 
 .star {
@@ -901,7 +904,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 @media (max-width: 560px) {
   .banner h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .banner p {

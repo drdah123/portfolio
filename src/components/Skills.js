@@ -9,7 +9,7 @@ import SkillsProject from './SkillsProject';
 
 const Skills = () => {
   const [text, setText] = useState('');
-  const comingRotate = ['say it will coming soon...'];
+  const comingRotate = ['whish it will coming soon...'];
   return (
     <div id="skills" className="pt-2 skill">
       <Stars background />
