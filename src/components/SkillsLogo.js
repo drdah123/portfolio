@@ -8,6 +8,7 @@ import nextjs from '../assets/img2/next-js.svg';
 import mongoDB from '../assets/img2/mongodb-logo-svgrepo-com.svg';
 import expressjs from '../assets/img2/Express-JS-min.png';
 import materiallUi from '../assets/img2/material-ui-1.svg';
+import typescriptLogo from '../assets/img2/Typescript_logo_2020.svg.png';
 
 import {
   faBootstrap,
@@ -17,6 +18,7 @@ import {
   faJsSquare,
   faNode,
   faReact,
+  faAngular,
 } from '@fortawesome/free-brands-svg-icons';
 
 const SkillsLogo = () => {
@@ -67,6 +69,12 @@ const SkillsLogo = () => {
         </div>
         <div className="face15">
           <img src={materiallUi} alt="mern-logo" />
+        </div>
+        <div className="face16">
+          <FontAwesomeIcon icon={faAngular} color="red" />
+        </div>
+        <div className="face17">
+          <img src={typescriptLogo} alt="mern-logo" />
         </div>
       </div>
     </div>

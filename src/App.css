@@ -1028,6 +1028,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .progress .progress-rate-75 {
   width: 75%;
 }
+.progress .progress-rate-65 {
+  width: 65%;
+}
+.progress .progress-rate-60 {
+  width: 60%;
+}
+
 .progress .progress-rate-50 {
   width: 50%;
 }
@@ -1098,6 +1105,9 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .face15 img {
   width: 50%;
 }
+.face17 img {
+  width: 44%;
+}
 .face7 img,
 .face10 img,
 .face5 img,
@@ -1145,6 +1155,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 .face15 {
   transform: rotateX(45deg) translateZ(150px);
+}
+.face16 {
+  transform: rotateX(-90deg) rotateY(45deg) rotate(90deg) translateZ(150px);
+}
+.face17 {
+  /* transform: rotateX(-90deg) rotateY(-45deg) rotate(270deg) translateZ(150px); */
+  transform: translateZ(-1px) rotateY(180deg);
 }
 @keyframes spincube {
   0% {

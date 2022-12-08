@@ -141,6 +141,8 @@ export const SkillsData = [
   { name: 'TENSORFLOW JS', rate: 0 },
   { name: 'ALGORITHM JS', rate: 0 },
   { name: 'GIT', rate: 50 },
+  { name: 'Angular', rate: 60 },
+  { name: 'Typescript', rate: 65 },
 ];
 
 export const tabKeys = [
