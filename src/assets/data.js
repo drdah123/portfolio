@@ -12,6 +12,7 @@ import calendar from './img2/calendar.jpg';
 import ecommerceNext from './img2/ecommerce-sanity-nextjs.jpg';
 import twitterC from './img2/twitter-clone.jpg';
 import CarouselProjects from '../components/CarouselProjects';
+import ReduxCart from '../assets/img2/react-redux-smiple-cart.png';
 
 export const projectsFrontend = [
   {
@@ -63,7 +64,6 @@ export const projectsFrontend = [
     appUrl: 'https://abdulrahmancalendar.onrender.com',
     gitUrl: 'https://github.com/drdah123/google-calendar-clone',
   },
-
   {
     title: 'Youtube clone',
     description: '',
@@ -71,8 +71,32 @@ export const projectsFrontend = [
     appUrl: 'https://youtube-clone-n9ry.onrender.com',
     gitUrl: 'https://github.com/drdah123/youtube-clone',
   },
+  {
+    title: 'Simple cart',
+    description: 'Simple cart by state management Redux-React',
+    imgUrl: ReduxCart,
+    appUrl: 'https://react-redux-simple-cart.onrender.com',
+    gitUrl: 'https://github.com/drdah123/react_redux_simple_cart',
+  },
 ];
-
+export const angularProject = [
+  {
+    title: 'Lucid clone',
+    description: 'Lucid clone with Angular',
+    imgUrl: lucidClone,
+    appUrl: 'https://lustrous-torrone-884988.netlify.app/',
+    gitUrl: 'https://github.com/drdah123/lucid-angular/tree/main',
+  },
+];
+export const VueProject = [
+  {
+    title: 'Lucid clone',
+    description: 'Lucid clone with Vue',
+    imgUrl: lucidClone,
+    appUrl: 'https://lucid-vue.onrender.com/',
+    gitUrl: 'https://github.com/drdah123/lucid-vue/tree/main',
+  },
+];
 export const projectsFullStack = [
   {
     name: 'Amazona-clone',
@@ -148,7 +172,7 @@ export const SkillsData = [
 export const tabKeys = [
   {
     key: 'first',
-    title: 'Frontend',
+    title: 'React JS',
     component: <CarouselProjects projects={projectsFrontend} />,
   },
   {
@@ -158,11 +182,13 @@ export const tabKeys = [
   },
   {
     key: 'third',
-    title: 'Web3',
+    title: 'Angular JS',
+    component: <CarouselProjects projects={angularProject} />,
   },
   {
     key: 'forth',
-    title: 'UI UX design',
+    title: 'Vue JS',
+    component: <CarouselProjects projects={VueProject} />,
   },
   {
     key: 'fifth',

@@ -7,6 +7,7 @@ import TrackVisibility from 'react-on-screen';
 import BannerText from './BannerText';
 import Stars from './Stars';
 import { Link } from 'react-router-dom';
+import { useStateContext } from '../context/context';
 
 export const Banner = () => {
   const [text, setText] = useState('');

@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
 
-// import required modules
 import { Grid, Pagination } from 'swiper';
 import ProjectCard from './ProjectCard';
 
