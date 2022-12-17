@@ -177,7 +177,7 @@ export const tabKeys = [
   },
   {
     key: 'second',
-    title: 'Full stack',
+    title: 'Full stack React',
     component: <CarouselProjects projects={projectsFullStack} />,
   },
   {
