@@ -38,8 +38,8 @@ const CarouselProjects = ({ projects }) => {
         modules={[Grid, Pagination]}
         className="mySwiper"
       >
-        {projects?.map((project) => (
-          <SwiperSlide key={project.name}>
+        {projects?.map((project, i) => (
+          <SwiperSlide key={i}>
             <ProjectCard {...project} />
           </SwiperSlide>
         ))}

@@ -2,13 +2,23 @@ import React, { useState } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import TrackVisibility from 'react-on-screen';
 import Stars from './Stars';
+import redux from '../assets/img2/redux.svg';
+import mobX from '../assets/img2/mobx.svg';
 
-import { tabKeys } from '../assets/data';
+import { filterReactProject, tabKeys } from '../assets/data';
 import BannerText from './BannerText';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 export const Projects = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState('all');
+  const [currentProject, setCurrentProject] = useState('all');
   const comingRotate = ['say it will coming soon...'];
+
+  const handleReact = (type) => {
+    filterReactProject(type);
+    setCurrentProject(() => type);
+  };
 
   return (
     <section className="project" id="project">
@@ -23,7 +33,13 @@ export const Projects = () => {
                     isVisible ? 'animate__animated animate__bounce' : ''
                   }
                 >
-                  <h2 style={{ marginBottom: 50 }}>Projects</h2>
+                  <h2 style={{ marginBottom: 50 }}>Projects </h2>
+                  <p>
+                    *notice: there is projects have the same appearance but by
+                    deferent tools like amazon clone built by Redux state
+                    management, react context or MobX, also lucid clone built by
+                    react, angular ,and vue{' '}
+                  </p>
                 </div>
               )}
             </TrackVisibility>
@@ -48,23 +64,52 @@ export const Projects = () => {
                     }
                   >
                     {tabKeys.map((key) => (
-                      <Tab.Pane
-                        eventKey={key.key}
-                        key={key.key}
-                        className="d-flex align-items-center justify-content-center"
-                      >
-                        {key.component ? (
-                          key.component
-                        ) : (
-                          <h3>
-                            <BannerText
-                              text={text}
-                              setText={setText}
-                              toRotate={comingRotate}
-                              emptyContent
-                            />
-                          </h3>
-                        )}
+                      <Tab.Pane eventKey={key.key} key={key.key}>
+                        <div className="d-flex align-items-center justify-content-center">
+                          {key.key === 'first' ? (
+                            <div className="proj-choose-icon">
+                              <button
+                                className={
+                                  currentProject === 'redux' ? 'active' : ''
+                                }
+                                onClick={() => handleReact('redux')}
+                              >
+                                <img src={redux} alt="" />
+                              </button>
+                              <button
+                                className={
+                                  currentProject === 'mobX' ? 'active' : ''
+                                }
+                                onClick={() => handleReact('mobX')}
+                              >
+                                <img src={mobX} alt="" />
+                              </button>
+                              <button
+                                className={
+                                  currentProject === 'all' ? 'active' : ''
+                                }
+                                onClick={() => handleReact('all')}
+                              >
+                                <FontAwesomeIcon
+                                  icon={faReact}
+                                  color="#33AAFF"
+                                />
+                              </button>
+                            </div>
+                          ) : null}
+                          {key.component ? (
+                            key.component()
+                          ) : (
+                            <h3>
+                              <BannerText
+                                text={text}
+                                setText={setText}
+                                toRotate={comingRotate}
+                                emptyContent
+                              />
+                            </h3>
+                          )}
+                        </div>
                       </Tab.Pane>
                     ))}
                   </Tab.Content>

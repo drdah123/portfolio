@@ -20,6 +20,7 @@ export const projectsFrontend = [
     imgUrl: lucidClone,
     description: 'imitation lucid-motors home page',
     appUrl: 'https://lucid-motors-clone.onrender.com',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/lucid-clone-js',
   },
   {
@@ -27,6 +28,7 @@ export const projectsFrontend = [
     imgUrl: weatherApp,
     description: 'simple weather app with rapidAPI',
     appUrl: 'https://weeatherapp0.netlify.app/',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/weather-app',
   },
   {
@@ -34,6 +36,7 @@ export const projectsFrontend = [
     description: 'frontend Dashboard',
     imgUrl: dashboard,
     appUrl: 'https://dashboard-j5gx.onrender.com',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/dashboardd',
   },
   {
@@ -41,6 +44,7 @@ export const projectsFrontend = [
     description: 'simple quiz app with rapidAPI',
     imgUrl: quizApp,
     appUrl: 'https://quiz-abdalrahman.onrender.com/',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/quiz-app',
   },
   {
@@ -48,6 +52,7 @@ export const projectsFrontend = [
     description: 'Game web app',
     imgUrl: meoryGame,
     appUrl: 'https://meory-game-abdlarahman.onrender.com/',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/memory-game',
   },
   {
@@ -55,6 +60,7 @@ export const projectsFrontend = [
     description: 'Site with animation',
     imgUrl: protfolioanimation,
     appUrl: 'https://protfolioanimations.netlify.app/',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/protofilio-animation',
   },
   {
@@ -62,6 +68,7 @@ export const projectsFrontend = [
     description: 'simple calendar with dayjs library',
     imgUrl: calendar,
     appUrl: 'https://abdulrahmancalendar.onrender.com',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/google-calendar-clone',
   },
   {
@@ -69,6 +76,7 @@ export const projectsFrontend = [
     description: '',
     imgUrl: yuotubeClone,
     appUrl: 'https://youtube-clone-n9ry.onrender.com',
+    class: 'basic',
     gitUrl: 'https://github.com/drdah123/youtube-clone',
   },
   {
@@ -76,9 +84,19 @@ export const projectsFrontend = [
     description: 'Simple cart by state management Redux-React',
     imgUrl: ReduxCart,
     appUrl: 'https://react-redux-simple-cart.onrender.com',
+    class: 'redux',
     gitUrl: 'https://github.com/drdah123/react_redux_simple_cart',
   },
+  {
+    title: 'amazon clone by Redux',
+    description: 'big project by state management Redux-React',
+    imgUrl: amazona,
+    appUrl: 'https://amazon-frontend-redux.onrender.com',
+    class: 'redux',
+    gitUrl: 'https://github.com/drdah123/amazon-frontend-Redux',
+  },
 ];
+
 export const angularProject = [
   {
     title: 'Lucid clone',
@@ -169,26 +187,49 @@ export const SkillsData = [
   { name: 'Typescript', rate: 65 },
 ];
 
+let reactProject = projectsFrontend;
+export const filterReactProject = (type) => {
+  if (type === 'redux') {
+    reactProject = projectsFrontend.filter(
+      (project) => project.class === 'redux'
+    );
+  } else if (type === 'mobX') {
+    reactProject = projectsFrontend.filter(
+      (project) => project.class === 'mobX'
+    );
+  } else {
+    reactProject = projectsFrontend;
+  }
+};
+
 export const tabKeys = [
   {
     key: 'first',
     title: 'React JS',
-    component: <CarouselProjects projects={projectsFrontend} />,
+    component: () => {
+      return <CarouselProjects projects={reactProject} />;
+    },
   },
   {
     key: 'second',
     title: 'Full stack React',
-    component: <CarouselProjects projects={projectsFullStack} />,
+    component: () => {
+      return <CarouselProjects projects={projectsFullStack} />;
+    },
   },
   {
     key: 'third',
     title: 'Angular JS',
-    component: <CarouselProjects projects={angularProject} />,
+    component: () => {
+      return <CarouselProjects projects={angularProject} />;
+    },
   },
   {
     key: 'forth',
     title: 'Vue JS',
-    component: <CarouselProjects projects={VueProject} />,
+    component: () => {
+      return <CarouselProjects projects={VueProject} />;
+    },
   },
   {
     key: 'fifth',

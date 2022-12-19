@@ -1227,9 +1227,51 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  height: 120vh;
+  height: 140vh;
   background-color: black;
   overflow: hidden;
+}
+.proj-choose-icon {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proj-choose-icon button {
+  width: 6%;
+  margin: 0 5% 10%;
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+.proj-choose-icon button:hover {
+  opacity: 0.75;
+}
+.proj-choose-icon .active svg,
+.proj-choose-icon .active img {
+  opacity: 0.75;
+}
+.proj-choose-icon .active::before {
+  opacity: 1;
+}
+.proj-choose-icon button::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: white;
+  top: -20%;
+  opacity: 0;
+}
+.proj-choose-icon button:hover::before {
+  opacity: 1;
+}
+.proj-choose-icon img {
+  width: 100%;
+}
+.proj-choose-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .project h2 {
@@ -1259,9 +1301,23 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-item {
   width: 16.66%;
 }
+@media (max-width: 1100px) {
+  .project {
+    height: 150vh;
+  }
+}
 @media (max-width: 770px) {
   .project .nav.nav-pills .nav-item {
     width: 33%;
+  }
+  .project {
+    height: 175vh;
+  }
+  .proj-choose-icon button {
+    width: 13vw;
+  }
+  .proj-choose-icon {
+    margin: 0 0 20% 0;
   }
   .nav-link#projects-tabs-tab-first {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
