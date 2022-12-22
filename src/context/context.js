@@ -1,14 +1,11 @@
 import { createContext, useContext, useState } from 'react';
-import App from '../App';
 
 const StateContext = createContext();
 
-export const ContextProvider = () => {
+export const ContextProvider = ({ children }) => {
   const [first, setFirst] = useState('hello');
   return (
-    <StateContext.Provider value={{ first }}>
-      <App />
-    </StateContext.Provider>
+    <StateContext.Provider value={{ first }}>{children}</StateContext.Provider>
   );
 };
 

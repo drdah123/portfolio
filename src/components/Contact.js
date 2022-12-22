@@ -27,7 +27,7 @@ const Contact = () => {
           setButtonText('sent');
           setIsSent(true);
         },
-        (err) => {
+        () => {
           alert('your message does not send, please try again');
         }
       );
