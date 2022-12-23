@@ -178,13 +178,15 @@ export const SkillsData = [
   { name: 'SOLIDITY JS', rate: 0 },
   { name: 'BOOTSTRAP', rate: 90 },
   { name: 'MATERIAL UI', rate: 80 },
-  { name: 'TYPESCRIPT', rate: 0 },
+  { name: 'TYPESCRIPT', rate: 75 },
   { name: 'UI UX DESIGN', rate: 0 },
   { name: 'TENSORFLOW JS', rate: 0 },
   { name: 'ALGORITHM JS', rate: 0 },
   { name: 'GIT', rate: 50 },
-  { name: 'Angular', rate: 60 },
-  { name: 'Typescript', rate: 65 },
+  { name: 'ANGULAR JS', rate: 65 },
+  { name: 'VUE JS', rate: 60 },
+  { name: 'REACT REDUX', rate: 80 },
+  { name: 'REACT MOBX', rate: 0 },
 ];
 
 let reactProject = projectsFrontend;

@@ -1068,11 +1068,12 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   animation-name: spincube;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 5s;
+  animation-duration: 40s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
 }
+
 @media (max-width: 640px) {
   .cubespinner {
     top: -90vh;
@@ -1167,13 +1168,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   0% {
     transform: rotateY(360deg) rotateX(0deg);
   }
-  33% {
+  25% {
     transform: rotateY(270deg) rotateX(30deg);
   }
-  66% {
+  50% {
     transform: rotateY(180deg) rotateX(0deg);
   }
-  66% {
+  75% {
     transform: rotateY(90deg) rotateX(-30deg);
   }
   100% {
