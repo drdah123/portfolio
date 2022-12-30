@@ -11,7 +11,7 @@ const Skills = () => {
   const [text, setText] = useState('');
   const comingRotate = ['whish it will coming soon...'];
   return (
-    <div id="skills" className="pt-2 skill">
+    <section id="skills" className="pt-2 skill">
       <Stars background />
       <Container>
         <div>
@@ -39,7 +39,7 @@ const Skills = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

@@ -18,7 +18,8 @@ export const projectsFrontend = [
   {
     title: 'Lucid motors clone',
     imgUrl: lucidClone,
-    description: 'imitation lucid-motors home page',
+    description:
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
     appUrl: 'https://lucid-motors-clone.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/lucid-clone-js',
@@ -26,14 +27,15 @@ export const projectsFrontend = [
   {
     title: 'Weather App',
     imgUrl: weatherApp,
-    description: 'simple weather app with rapidAPI',
+    description: 'simple weather app with rapidAPI work with fetch data',
     appUrl: 'https://weeatherapp0.netlify.app/',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/weather-app',
   },
   {
     title: 'Dashboard',
-    description: 'frontend Dashboard',
+    description:
+      'frontend Dashboard uses syncfusion library, Injected component and services, useContext, theme, tailwind and responsive',
     imgUrl: dashboard,
     appUrl: 'https://dashboard-j5gx.onrender.com',
     class: 'basic',
@@ -100,7 +102,9 @@ export const projectsFrontend = [
 export const angularProject = [
   {
     title: 'Lucid clone',
-    description: 'Lucid clone with Angular',
+    description:
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
+
     imgUrl: lucidClone,
     appUrl: 'https://lustrous-torrone-884988.netlify.app/',
     gitUrl: 'https://github.com/drdah123/lucid-angular/tree/main',
@@ -109,7 +113,9 @@ export const angularProject = [
 export const VueProject = [
   {
     title: 'Lucid clone',
-    description: 'Lucid clone with Vue',
+    description:
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
+
     imgUrl: lucidClone,
     appUrl: 'https://lucid-vue.onrender.com/',
     gitUrl: 'https://github.com/drdah123/lucid-vue/tree/main',
@@ -182,7 +188,7 @@ export const SkillsData = [
   { name: 'UI UX DESIGN', rate: 0 },
   { name: 'TENSORFLOW JS', rate: 0 },
   { name: 'ALGORITHM JS', rate: 0 },
-  { name: 'GIT', rate: 50 },
+  { name: 'GIT', rate: 90 },
   { name: 'ANGULAR JS', rate: 65 },
   { name: 'VUE JS', rate: 60 },
   { name: 'REACT REDUX', rate: 80 },

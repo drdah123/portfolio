@@ -28,64 +28,68 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? 'scrolled ' : ''}>
-      <Container>
-        <Navbar.Brand>
-          <h1>
-            <Link
-              to="/"
-              className="navbar navbar-brand"
-              onClick={() => onUpdateActiveLink('Home')}
-            >
-              <img src={logoA} alt="" />
-            </Link>
-          </h1>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link
-              className={
-                activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
-              }
-              onClick={() => onUpdateActiveLink('Skills')}
-            >
-              <Link to="/skill">Skills</Link>
-            </Nav.Link>
-            <Nav.Link
-              className={
-                activeLink === 'Project' ? 'active navbar-link' : 'navbar-link'
-              }
-              onClick={() => onUpdateActiveLink('Project')}
-            >
-              <Link to="/project">Project</Link>
-            </Nav.Link>
-          </Nav>
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a
-                href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
-                target="_blank"
-                rel="noreferrer"
+    <header>
+      <Navbar expand="lg" className={scrolled ? 'scrolled ' : ''}>
+        <Container>
+          <Navbar.Brand>
+            <h1>
+              <Link
+                to="/"
+                className="navbar navbar-brand"
+                onClick={() => onUpdateActiveLink('Home')}
               >
-                <img src={navIcon1} alt="" />
-              </a>
-              <a
-                href="https://github.com/drdah123"
-                target="_blank"
-                rel="noreferrer"
+                <img src={logoA} alt="" />
+              </Link>
+            </h1>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link
+                className={
+                  activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
+                }
+                onClick={() => onUpdateActiveLink('Skills')}
               >
-                <img src={navIcon2} alt="" />
-              </a>
-            </div>
-            <Link className="vvd" to="/contact">
-              <span>lets connect</span>
-            </Link>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+                <Link to="/skill">Skills</Link>
+              </Nav.Link>
+              <Nav.Link
+                className={
+                  activeLink === 'Project'
+                    ? 'active navbar-link'
+                    : 'navbar-link'
+                }
+                onClick={() => onUpdateActiveLink('Project')}
+              >
+                <Link to="/project">Project</Link>
+              </Nav.Link>
+            </Nav>
+            <span className="navbar-text">
+              <div className="social-icon">
+                <a
+                  href="https://www.linkedin.com/in/abdlarahman-eid-778067235/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={navIcon1} alt="" />
+                </a>
+                <a
+                  href="https://github.com/drdah123"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={navIcon2} alt="" />
+                </a>
+              </div>
+              <Link className="vvd" to="/contact">
+                <span>lets connect</span>
+              </Link>
+            </span>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </header>
   );
 };

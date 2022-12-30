@@ -11,12 +11,14 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" exact element={<Banner />} />
-        <Route path="/skill" exact element={<Skills />} />
-        <Route path="/project" exact element={<Projects />} />
-        <Route path="/contact" exact element={<Contact />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" exact element={<Banner />} />
+          <Route path="/skill" exact element={<Skills />} />
+          <Route path="/project" exact element={<Projects />} />
+          <Route path="/contact" exact element={<Contact />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }

@@ -7,7 +7,7 @@ import logoA from '../assets/img2/logoNavbar2.png';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer>
       <Container>
         <Row className="align-items-center">
           <MailchimpForm />

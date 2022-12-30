@@ -9,6 +9,7 @@ import { filterReactProject, tabKeys } from '../assets/data';
 import BannerText from './BannerText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
+import ProjectCardDetails from './ProjectCardDetails';
 
 export const Projects = () => {
   const [text, setText] = useState('all');
@@ -40,6 +41,7 @@ export const Projects = () => {
                     management, react context or MobX, also lucid clone built by
                     react, angular ,and vue{' '}
                   </p>
+                  <p>*Hover project for demo and git url</p>
                 </div>
               )}
             </TrackVisibility>
@@ -112,6 +114,7 @@ export const Projects = () => {
                         </div>
                       </Tab.Pane>
                     ))}
+                    <ProjectCardDetails />
                   </Tab.Content>
                 )}
               </TrackVisibility>
