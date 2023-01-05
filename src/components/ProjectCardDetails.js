@@ -1,14 +1,22 @@
 import { Card, Col, Container } from 'react-bootstrap';
 import { useStateContext } from '../context/context';
-import { projectsFrontend } from '../assets/data';
+import {
+  VueProject,
+  angularProject,
+  projectsFrontend,
+  projectsFullStack,
+} from '../assets/data';
 import navIcon2 from '../assets/img/nav-icon2.png';
 
 const ProjectCardDetails = () => {
   const { currentHover, handleHoverProj } = useStateContext();
-
-  const projHover = projectsFrontend.find(
-    (proj) => proj.title === currentHover
-  );
+  let allProject = [
+    ...projectsFrontend,
+    ...projectsFullStack,
+    ...VueProject,
+    ...angularProject,
+  ];
+  const projHover = allProject.find((proj) => proj.title === currentHover);
 
   const handleHoverOut = () => handleHoverProj();
 

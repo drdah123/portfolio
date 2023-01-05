@@ -80,6 +80,7 @@ export const certifications = [
     url: 'https://coursera.org/share/29c3fec7702bb863bc10fd67cbfa990e',
   },
 ];
+
 export const projectsFrontend = [
   {
     title: 'Lucid motors clone',

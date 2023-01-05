@@ -1,11 +1,14 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { certifications } from '../assets/data';
+import Stars from './Stars';
 
 const Certifications = () => {
   return (
     <section>
       <article>
+        <Stars background />
+        <Stars background bottom />
         <Row className="card-certification-container">
           {certifications.map((item, i) => (
             <Col xl={6} key={i} className="card-certification">

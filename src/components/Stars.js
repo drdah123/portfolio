@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Stars = ({ background }) => {
+const Stars = ({ background, bottom }) => {
   useEffect(() => {
     if (!background) {
       const cursorStars = document.querySelector('.small-night');
@@ -24,7 +24,7 @@ const Stars = ({ background }) => {
           <div className="small-star"></div>
         </div>
       ) : (
-        <div className="stars">
+        <div className={`stars ${bottom ? 'stars-bottom' : ''}`}>
           <div className="star"></div>
           <div className="star"></div>
           <div className="star"></div>
