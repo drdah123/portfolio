@@ -30,9 +30,9 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
-                  className={
+                  className={` ${
                     isVisible ? 'animate__animated animate__bounce' : ''
-                  }
+                  }`}
                 >
                   <h2 style={{ marginBottom: 50 }}>Projects </h2>
                   <p>
