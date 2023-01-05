@@ -1813,4 +1813,7 @@ footer p {
   .card-certification-container {
     padding: 0;
   }
+  .projects-content h4 {
+    top: -350%;
+  }
 }
