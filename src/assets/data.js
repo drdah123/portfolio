@@ -13,7 +13,73 @@ import ecommerceNext from './img2/ecommerce-sanity-nextjs.jpg';
 import twitterC from './img2/twitter-clone.jpg';
 import CarouselProjects from '../components/CarouselProjects';
 import ReduxCart from '../assets/img2/react-redux-smiple-cart.png';
+import pdfIntroduction from './pdf/Introduction to Front-End Development.png';
+import programWithJS from './pdf/Programming with JavaScript.jpeg';
+import versionC from './pdf/Version Control.jpeg';
+import inDepth from './pdf/HTML and CSS in depth.jpeg';
+import reactBsics from './pdf/React Basics.jpeg';
+import reactAdvance from './pdf/Advanced React.jpeg';
+import PrinciplesUX_UI from './pdf/principles of UX UI Design.jpeg';
+import Capstone from './pdf/Front-End Developer Capstone.jpeg';
 
+export const certifications = [
+  {
+    name: 'Introduction to Front-End Development ',
+    degree: '99%',
+    date: 'Achieved Dec 25 2022',
+    img: pdfIntroduction,
+    url: 'https://coursera.org/share/7c020edca6b05ddde7d194dbc72480b9',
+  },
+  {
+    name: 'Programming with JavaScript ',
+    degree: '100%',
+    date: 'Achieved Dec 25, 2022',
+    img: programWithJS,
+    url: 'https://coursera.org/share/5e1ae865f0b902938ae2c5956ef5d353',
+  },
+  {
+    name: 'Version Control',
+    degree: '100%',
+    date: 'Achieved Dec 26 2022',
+    img: versionC,
+    url: 'https://coursera.org/share/765bf42f4a6f64c233b1e4e61a56fa4d',
+  },
+  {
+    name: 'HTML and CSS in depth',
+    degree: '96.23%',
+    date: 'Achieved Dec 24 2022',
+    img: inDepth,
+    url: 'https://coursera.org/share/235c862611ec1c7b3096a8fe2d0c06ac',
+  },
+  {
+    name: 'React Basics',
+    degree: '92.5%',
+    date: 'Achieved Dec 21 2022',
+    img: reactBsics,
+    url: 'https://coursera.org/share/7308967106c2cc222599ac3d66fe4395',
+  },
+  {
+    name: 'Advanced React',
+    degree: '99.6%',
+    date: 'Achieved Dec 29 2022',
+    img: reactAdvance,
+    url: 'https://coursera.org/share/38b9d0762dfad77f9a93e80a03d8f46a',
+  },
+  {
+    name: 'Principles of UX/UI Design',
+    degree: '100%',
+    date: 'Achieved Jan 2, 2023',
+    img: PrinciplesUX_UI,
+    url: 'https://coursera.org/share/ec088d260386fbcff75df37ecfd95955',
+  },
+  {
+    name: 'Front-End Developer Capstone',
+    degree: '96.66%',
+    date: 'Achieved Jan 2, 2023',
+    img: Capstone,
+    url: 'https://coursera.org/share/29c3fec7702bb863bc10fd67cbfa990e',
+  },
+];
 export const projectsFrontend = [
   {
     title: 'Lucid motors clone',

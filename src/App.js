@@ -6,6 +6,7 @@ import { Projects } from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Certifications from './components/Certifications';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/skill" exact element={<Skills />} />
           <Route path="/project" exact element={<Projects />} />
           <Route path="/contact" exact element={<Contact />} />
+          <Route path="/certification" exact element={<Certifications />} />
         </Routes>
       </main>
     </BrowserRouter>
