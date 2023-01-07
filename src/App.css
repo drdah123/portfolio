@@ -1193,16 +1193,25 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project-carousel .mySwiper {
-  width: 90%;
+  width: 100%;
   height: 100vh;
   left: 0%;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  margin: 0 5%;
-  padding: 5% 0;
+  /* margin: 0 5%; */
+  padding: 5% 5%;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  top: 35% !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #753aa2;
+}
 @media (max-width: 560px) {
   .project-carousel .mySwiper {
     height: 85vh;

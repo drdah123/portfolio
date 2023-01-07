@@ -10,6 +10,7 @@ import BannerText from './BannerText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import ProjectCardDetails from './ProjectCardDetails';
+import ProjectFilterButton from './ProjectFilterButton';
 
 export const Projects = () => {
   const [text, setText] = useState('all');
@@ -41,7 +42,10 @@ export const Projects = () => {
                     management, react context or MobX, also lucid clone built by
                     react, angular ,and vue{' '}
                   </p>
-                  <p>*Hover project for demo and git url</p>
+                  <p>
+                    *Hover project for details and let mouse leave it to
+                    disappear
+                  </p>
                 </div>
               )}
             </TrackVisibility>
@@ -70,33 +74,37 @@ export const Projects = () => {
                         <div className="d-flex align-items-center justify-content-center">
                           {key.key === 'first' ? (
                             <div className="proj-choose-icon">
-                              <button
-                                className={
-                                  currentProject === 'redux' ? 'active' : ''
+                              <ProjectFilterButton
+                                currentProject={
+                                  currentProject === 'redux' && true
                                 }
-                                onClick={() => handleReact('redux')}
-                              >
-                                <img src={redux} alt="" />
-                              </button>
-                              <button
-                                className={
-                                  currentProject === 'mobX' ? 'active' : ''
+                                img={redux}
+                                handleReact={handleReact}
+                                categoryName="redux"
+                              />
+
+                              <ProjectFilterButton
+                                currentProject={
+                                  currentProject === 'mobX' && true
                                 }
-                                onClick={() => handleReact('mobX')}
-                              >
-                                <img src={mobX} alt="" />
-                              </button>
-                              <button
-                                className={
-                                  currentProject === 'all' ? 'active' : ''
+                                img={mobX}
+                                handleReact={handleReact}
+                                categoryName="mobX"
+                              />
+
+                              <ProjectFilterButton
+                                currentProject={
+                                  currentProject === 'all' && true
                                 }
-                                onClick={() => handleReact('all')}
-                              >
-                                <FontAwesomeIcon
-                                  icon={faReact}
-                                  color="#33AAFF"
-                                />
-                              </button>
+                                img={
+                                  <FontAwesomeIcon
+                                    icon={faReact}
+                                    color="#33AAFF"
+                                  />
+                                }
+                                handleReact={handleReact}
+                                categoryName="all"
+                              />
                             </div>
                           ) : null}
                           {key.component ? (

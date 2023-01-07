@@ -7,16 +7,22 @@ import {
   projectsFullStack,
 } from '../assets/data';
 import navIcon2 from '../assets/img/nav-icon2.png';
+import { useMemo, useState } from 'react';
 
 const ProjectCardDetails = () => {
   const { currentHover, handleHoverProj } = useStateContext();
+  const [projHover, setProjHover] = useState([]);
   let allProject = [
     ...projectsFrontend,
     ...projectsFullStack,
     ...VueProject,
     ...angularProject,
   ];
-  const projHover = allProject.find((proj) => proj.title === currentHover);
+
+  useMemo(
+    () => setProjHover(allProject.find((proj) => proj.title === currentHover)),
+    [handleHoverProj]
+  );
 
   const handleHoverOut = () => handleHoverProj();
 

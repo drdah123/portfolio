@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import { Grid, Pagination, Navigation } from 'swiper';
 import ProjectCard from './ProjectCard';
@@ -34,12 +35,13 @@ const CarouselProjects = ({ projects }) => {
         pagination={{
           type: 'progressbar',
         }}
-        modules={[Grid, Pagination, Navigation]}
+        modules={[Navigation, Grid, Pagination]}
+        navigation={true}
         autoplay={true}
         className="mySwiper"
       >
-        {projects?.map((project) => (
-          <SwiperSlide key={project.title}>
+        {projects?.map((project, i) => (
+          <SwiperSlide key={project.title} virtualIndex={i}>
             <ProjectCard {...project} />
           </SwiperSlide>
         ))}
