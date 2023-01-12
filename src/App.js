@@ -19,7 +19,9 @@ function App() {
   const { project } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    navigate(project);
+    if (project) {
+      navigate(project);
+    }
   }, []);
 
   return (
