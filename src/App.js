@@ -5,10 +5,23 @@ import { Banner } from './components/Banner';
 import { Projects } from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  useNavigate,
+} from 'react-router-dom';
 import Certifications from './components/Certifications';
+import { useEffect } from 'react';
 
 function App() {
+  const { project } = useParams();
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(project);
+  }, []);
+
   return (
     <BrowserRouter>
       <NavBar />
