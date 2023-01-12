@@ -5,12 +5,12 @@ import { Banner } from './components/Banner';
 import { Projects } from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Certifications from './components/Certifications';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar />
       <main>
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="/certification" exact element={<Certifications />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
