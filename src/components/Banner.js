@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowDown } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
@@ -6,7 +6,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import BannerText from './BannerText';
 import Stars from './Stars';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 export const Banner = () => {
   const [text, setText] = useState('');
@@ -24,6 +24,14 @@ export const Banner = () => {
     'I Learned many things about javascript',
     'Now I am learning ui ux design, Web3, Typescript, React native and some of Machine learning (Tensorflow.js)',
   ];
+
+  const { project } = useParams();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (project) {
+      navigate(project);
+    }
+  }, []);
 
   return (
     <div className="banner">
