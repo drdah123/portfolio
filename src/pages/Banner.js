@@ -4,8 +4,8 @@ import { ArrowDown } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import BannerText from './BannerText';
-import Stars from './Stars';
+import BannerText from '../components/BannerText';
+import Stars from '../components/Stars';
 import { Link } from 'react-router-dom';
 
 export const Banner = () => {

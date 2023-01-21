@@ -1,12 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from './components/NavBar';
-import { Banner } from './components/Banner';
-import { Projects } from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import { Banner } from './pages/Banner';
+import { Projects } from './pages/Projects';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 import { Routes, Route, HashRouter } from 'react-router-dom';
-import Certifications from './components/Certifications';
+import Certifications from './pages/Certifications';
 
 function App() {
   return (

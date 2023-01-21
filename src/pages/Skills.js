@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { SkillsData } from '../assets/data';
 
-import Stars from './Stars';
+import Stars from '../components/Stars';
 
-import SkillsLogo from './SkillsLogo';
-import SkillsProject from './SkillsProject';
+import SkillsLogo from '../components/SkillsLogo';
+import SkillsProject from '../components/SkillsProject';
 
 const Skills = () => {
   const [text, setText] = useState('');

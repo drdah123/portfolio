@@ -11,7 +11,6 @@ import yuotubeClone from './img2/youtube clone.jpg';
 import calendar from './img2/calendar.jpg';
 import ecommerceNext from './img2/ecommerce-sanity-nextjs.jpg';
 import twitterC from './img2/twitter-clone.jpg';
-import CarouselProjects from '../components/CarouselProjects';
 import ReduxCart from '../assets/img2/react-redux-smiple-cart.png';
 import pdfIntroduction from './pdf/Introduction to Front-End Development.png';
 import programWithJS from './pdf/Programming with JavaScript.jpeg';
@@ -21,6 +20,7 @@ import reactBsics from './pdf/React Basics.jpeg';
 import reactAdvance from './pdf/Advanced React.jpeg';
 import PrinciplesUX_UI from './pdf/principles of UX UI Design.jpeg';
 import Capstone from './pdf/Front-End Developer Capstone.jpeg';
+import Carousel from '../components/CarouselReactSlick';
 
 export const certifications = [
   {
@@ -282,28 +282,28 @@ export const tabKeys = [
     key: 'first',
     title: 'React JS',
     component: () => {
-      return <CarouselProjects projects={reactProject} />;
+      return <Carousel projects={reactProject} />;
     },
   },
   {
     key: 'second',
     title: 'Full stack React',
     component: () => {
-      return <CarouselProjects projects={projectsFullStack} />;
+      return <Carousel projects={projectsFullStack} />;
     },
   },
   {
     key: 'third',
     title: 'Angular JS',
     component: () => {
-      return <CarouselProjects projects={angularProject} />;
+      return <Carousel projects={angularProject} />;
     },
   },
   {
     key: 'forth',
     title: 'Vue JS',
     component: () => {
-      return <CarouselProjects projects={VueProject} />;
+      return <Carousel projects={VueProject} />;
     },
   },
   {

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import TrackVisibility from 'react-on-screen';
-import Stars from './Stars';
+import Stars from '../components/Stars';
 import redux from '../assets/img2/redux.svg';
 import mobX from '../assets/img2/mobx.svg';
 
 import { filterReactProject, tabKeys } from '../assets/data';
-import BannerText from './BannerText';
+import BannerText from '../components/BannerText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
-import ProjectCardDetails from './ProjectCardDetails';
-import ProjectFilterButton from './ProjectFilterButton';
+import ProjectCardDetails from '../components/ProjectCardDetails';
+import ProjectFilterButton from '../components/ProjectFilterButton';
 
 export const Projects = () => {
   const [text, setText] = useState('all');
@@ -43,8 +43,7 @@ export const Projects = () => {
                     react, angular ,and vue{' '}
                   </p>
                   <p>
-                    *Hover project for details and let mouse leave it to
-                    disappear
+                    *click project for details and double click it to disappear
                   </p>
                 </div>
               )}
@@ -107,19 +106,19 @@ export const Projects = () => {
                               />
                             </div>
                           ) : null}
-                          {key.component ? (
-                            key.component()
-                          ) : (
-                            <h3>
-                              <BannerText
-                                text={text}
-                                setText={setText}
-                                toRotate={comingRotate}
-                                emptyContent
-                              />
-                            </h3>
-                          )}
                         </div>
+                        {key.component ? (
+                          key.component()
+                        ) : (
+                          <h3>
+                            <BannerText
+                              text={text}
+                              setText={setText}
+                              toRotate={comingRotate}
+                              emptyContent
+                            />
+                          </h3>
+                        )}
                       </Tab.Pane>
                     ))}
                     <ProjectCardDetails />

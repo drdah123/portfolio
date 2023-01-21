@@ -29,7 +29,7 @@ const ProjectCardDetails = () => {
   return (
     <Container
       className={`card-details-proj ${currentHover ? 'd-block' : ''}`}
-      onMouseLeave={handleHoverOut}
+      onDoubleClick={handleHoverOut}
     >
       <Col>
         <Card>
