@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateContext } from '../context/context';
 import { Card } from 'react-bootstrap';
 
-const ProjectCard = ({ title, description, imgUrl, appUrl, gitUrl, index }) => {
+const ProjectCard = ({ title, imgUrl }) => {
   const { currentHover, handleHoverProj } = useStateContext();
   const handleHover = () => handleHoverProj(title);
 
@@ -12,9 +12,8 @@ const ProjectCard = ({ title, description, imgUrl, appUrl, gitUrl, index }) => {
         currentHover && currentHover !== title ? 'd-none' : ''
       } ${currentHover && currentHover === title ? 'd-invisible-proj' : ''}`}
       onClick={handleHover}
-      key={index}
     >
-      <Card className="card-proj-imgbx">
+      <Card>
         <Card.Img src={imgUrl} />
         <Card.ImgOverlay>
           <Card.Title>

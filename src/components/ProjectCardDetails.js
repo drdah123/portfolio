@@ -40,10 +40,14 @@ const ProjectCardDetails = () => {
               {projHover?.description}
             </Card.Text>
             <div className="card-details-proj-links">
-              <Card.Link href={projHover?.appUrl} className="first-link">
+              <Card.Link
+                target="_blank"
+                href={projHover?.appUrl}
+                className="first-link"
+              >
                 Demo
               </Card.Link>
-              <Card.Link href={projHover?.gitUrl} className="">
+              <Card.Link target="_blank" href={projHover?.gitUrl} className="">
                 {' '}
                 <img src={navIcon2} alt="" />
               </Card.Link>
