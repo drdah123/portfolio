@@ -40,13 +40,11 @@ const settings = {
 
 const Carousel = ({ projects }) => {
   return (
-    <div className="carousel-container-slick ">
-      <Slider {...settings}>
-        {projects?.map((item, i) => (
-          <ProjectCard {...item} index={i} />
-        ))}
-      </Slider>
-    </div>
+    <Slider {...settings}>
+      {projects?.map((item, i) => (
+        <ProjectCard {...item} index={i} />
+      ))}
+    </Slider>
   );
 };
 
