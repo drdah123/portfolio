@@ -12,7 +12,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import ProjectCardDetails from '../components/ProjectCardDetails';
 import ProjectFilterButton from '../components/ProjectFilterButton';
 
-export const Projects = () => {
+const Projects = () => {
   const [text, setText] = useState('all');
   const [currentProject, setCurrentProject] = useState('all');
   const comingRotate = ['say it will coming soon...'];
@@ -132,3 +132,5 @@ export const Projects = () => {
     </section>
   );
 };
+
+export default Projects;

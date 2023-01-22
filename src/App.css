@@ -49,6 +49,12 @@ h6 {
   line-height: normal;
 }
 
+.loading-spin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 p,
 a,
 li,
@@ -1192,16 +1198,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 
 /************ Projects Css ************/
-.project-carousel .mySwiper {
-  width: 100%;
-  height: 100vh;
-  left: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  /* margin: 0 5%; */
-  padding: 5% 5%;
-}
 
 .carousel-react-slick {
   width: 90vw;
@@ -1209,46 +1205,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   left: 0%;
   position: absolute;
   margin: 0% 5%;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  top: 35% !important;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  color: #753aa2;
-}
-@media (max-width: 560px) {
-  .project-carousel .mySwiper {
-    height: 85vh;
-  }
-}
-.mySwiper .swiper-pagination span {
-  background-color: #753aa2;
-}
-.mySwiper .swiper-pagination {
-  background-color: lightgray;
-}
-.mySwiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  background: inherit;
-  height: 35% !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 .project {
@@ -1394,11 +1350,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
-}
-
-.carousel-container-slick {
-  height: 100vh;
-  overflow: hidden;
 }
 
 .slick-slide > div {

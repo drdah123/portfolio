@@ -8,7 +8,7 @@ import BannerText from '../components/BannerText';
 import Stars from '../components/Stars';
 import { Link } from 'react-router-dom';
 
-export const Banner = () => {
+const Banner = () => {
   const [text, setText] = useState('');
   const [textCv, setTextCv] = useState('');
   const headRotate = [
@@ -75,3 +75,5 @@ export const Banner = () => {
     </div>
   );
 };
+
+export default Banner;
