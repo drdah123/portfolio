@@ -121,10 +121,10 @@ const Projects = () => {
                         )}
                       </Tab.Pane>
                     ))}
-                    <ProjectCardDetails />
                   </Tab.Content>
                 )}
               </TrackVisibility>
+              <ProjectCardDetails />
             </Tab.Container>
           </Col>
         </Row>
