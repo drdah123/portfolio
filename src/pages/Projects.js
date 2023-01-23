@@ -43,7 +43,7 @@ const Projects = () => {
                     react, angular ,and vue{' '}
                   </p>
                   <p>
-                    *click project for details and double click it to disappear
+                    *click project for details and double click on it to disappear
                   </p>
                 </div>
               )}

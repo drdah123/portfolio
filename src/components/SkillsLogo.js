@@ -20,10 +20,11 @@ import {
   faReact,
   faAngular,
 } from '@fortawesome/free-brands-svg-icons';
+import { Col, Row } from 'react-bootstrap';
 
 const SkillsLogo = () => {
   return (
-    <div className="cubespinner-container">
+    <Col className="cubespinner-container">
       <div className="cubespinner">
         <div className="face1">
           <FontAwesomeIcon icon={faGitAlt} color="#DD0031" />
@@ -77,7 +78,7 @@ const SkillsLogo = () => {
           <img src={typescriptLogo} alt="mern-logo" />
         </div>
       </div>
-    </div>
+    </Col>
   );
 };
 

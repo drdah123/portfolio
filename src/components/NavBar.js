@@ -47,34 +47,45 @@ function NavBar() {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link
-                className={
+              <Link
+                to="/skill"
+                className={`nav-link 
+                ${
                   activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
                 }
+              `}
                 onClick={() => onUpdateActiveLink('Skills')}
               >
-                <Link to="/skill">Skills</Link>
-              </Nav.Link>
-              <Nav.Link
-                className={
-                  activeLink === 'Project'
+                Skills
+              </Link>
+
+              <Link
+                className={`nav-link 
+                 ${
+                   activeLink === 'Projects'
+                     ? 'active navbar-link'
+                     : 'navbar-link'
+                 }
+               `}
+                onClick={() => onUpdateActiveLink('Projects')}
+                to="/project"
+              >
+                Projects
+              </Link>
+
+              <Link
+                to="/Certification"
+                className={`nav-link 
+                ${
+                  activeLink === 'Certifications'
                     ? 'active navbar-link'
                     : 'navbar-link'
                 }
-                onClick={() => onUpdateActiveLink('Project')}
+              `}
+                onClick={() => onUpdateActiveLink('Certifications')}
               >
-                <Link to="/project">Project</Link>
-              </Nav.Link>
-              <Nav.Link
-                className={
-                  activeLink === 'Certification'
-                    ? 'active navbar-link'
-                    : 'navbar-link'
-                }
-                onClick={() => onUpdateActiveLink('Certification')}
-              >
-                <Link to="/Certification">Certification</Link>
-              </Nav.Link>
+                Certifications
+              </Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
