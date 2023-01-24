@@ -80,13 +80,13 @@ export const certifications = [
     img: Capstone,
     url: 'https://coursera.org/share/29c3fec7702bb863bc10fd67cbfa990e',
   },
-  // {
-  //   name: 'Agile Project Management',
-  //   degree: '99%',
-  //   date: 'Achieved Jan 11, 2023',
-  //   img: agileProjectMangement,
-  //   url: 'https://coursera.org/share/e800acb6adc68d14186a00ea07bcb7cf',
-  // },
+  {
+    name: 'Agile Project Management',
+    degree: '99%',
+    date: 'Achieved Jan 11, 2023',
+    img: agileProjectMangement,
+    url: 'https://coursera.org/share/e800acb6adc68d14186a00ea07bcb7cf',
+  },
 ];
 
 export const projectsFrontend = [
