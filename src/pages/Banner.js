@@ -11,11 +11,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   const [text, setText] = useState('');
   const [textCv, setTextCv] = useState('');
-  const headRotate = [
-    'Web app developer',
-    'Frontend developer',
-    'Full stack developer',
-  ];
+  const headRotate = ['Frontend developer', 'Full stack developer'];
   const cvRotate = [
     'simple guy want to explore a new things',
     'My old is 24',

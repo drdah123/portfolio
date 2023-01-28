@@ -1071,7 +1071,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 /************* animation for Skills *************/
 .cubespinner-container {
   position: relative;
-  top: 30%;
+  top: 25%;
 }
 
 @media (max-width: 620px) {
@@ -1236,7 +1236,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  height: 150vh;
+  height: fit-content;
   background-color: black;
   overflow: hidden;
 }
@@ -1302,17 +1302,14 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .project .nav.nav-pills {
   width: fit-content;
   margin: 0 auto;
-  border-radius: 10px;
-  background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .project .nav.nav-pills .nav-item {
   width: 175px;
+  margin: 0 5px;
 }
 @media (max-width: 1100px) {
   .project {
@@ -1320,9 +1317,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   }
 }
 @media (max-width: 770px) {
-  /* .project .nav.nav-pills .nav-item {
-    width: 33%;
-  } */
   .project {
     height: 175vh;
   }
@@ -1332,10 +1326,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   .proj-choose-icon {
     margin: 0 0 20% 0;
   }
-
-  /* .project .nav.nav-pills {
-    width: 95%;
-  } */
 }
 .nav-pills .nav-link {
   border-radius: 0 !important;
@@ -1365,11 +1355,15 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   top: 0;
   left: 0;
   z-index: -1;
+  border-radius: 5px;
   transition: 0.3s ease-in-out;
 }
 
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+  border: 0;
 }
 
 .slick-slide > div {
@@ -1592,8 +1586,7 @@ footer {
   border-radius: 55px;
   color: #121212;
   padding: 85px 150px;
-  margin-bottom: 80px;
-  margin-top: -122px;
+  margin: -120px auto 80px auto;
 }
 
 .newsletter-bx h3 {
