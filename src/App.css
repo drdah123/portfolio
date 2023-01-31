@@ -1211,10 +1211,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 
-.carousel-react-slick {
-  width: 100%;
-  height: 70vh;
-}
 @media (max-width: 600px) {
   .carousel-react-slick {
     width: 90%;
@@ -1226,9 +1222,10 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   opacity: 1;
 }
 .slick-dots {
-  top: -5%;
+  top: -7.5%;
   height: fit-content;
 }
+
 .slick-dots li.slick-active button:before {
   color: #753aa2;
   opacity: 1;
@@ -1236,7 +1233,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  height: fit-content;
   background-color: black;
   overflow: hidden;
 }
@@ -1247,12 +1243,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   justify-content: center;
 }
 .proj-choose-icon button {
-  width: 6%;
+  width: max(5vw, 100px);
   margin: 0 5% 3% 5%;
   display: block;
   position: relative;
   opacity: 1;
 }
+
 .proj-choose-icon button:hover {
   opacity: 0.75;
 }
@@ -1311,20 +1308,10 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   width: 175px;
   margin: 0 5px;
 }
-@media (max-width: 1100px) {
-  .project {
-    height: 150vh;
-  }
-}
+
 @media (max-width: 770px) {
-  .project {
-    height: 175vh;
-  }
-  .proj-choose-icon button {
-    width: 13vw;
-  }
   .proj-choose-icon {
-    margin: 0 0 20% 0;
+    margin-bottom: 10%;
   }
 }
 .nav-pills .nav-link {
@@ -1376,11 +1363,12 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  /* margin: 10%; */
   color: #0ccccc;
-  /* width: 30vw; */
   z-index: 9999;
-  height: 33vh;
+  margin-top: 10px;
+}
+.proj-imgbx img {
+  height: 200px;
 }
 
 .proj-imgbx .d-none {
@@ -1755,4 +1743,28 @@ footer p {
   .card-certification-container {
     padding: 0;
   }
+}
+
+.gallery-move-container {
+  margin-top: 100px !important;
+}
+.gallery-move {
+  position: relative;
+}
+.gallery-move div {
+  width: 105%;
+  height: 100%;
+}
+.gallery-move img {
+  width: 100%;
+  height: 100%;
+}
+.gallery-move-list img:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.gallery-move-list {
+  display: block;
+  overflow: hidden;
 }
