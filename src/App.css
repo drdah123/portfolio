@@ -1381,11 +1381,11 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   display: none;
   z-index: 10000;
   color: #000;
-  position: absolute;
+  position: fixed;
   width: 60% !important;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -22%);
+  transform: translate(-50%, -50%);
 }
 .card-details-proj .col .card {
   /* width: 100%; */
