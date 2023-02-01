@@ -3,16 +3,11 @@ import { useStateContext } from '../context/context';
 import { Card } from 'react-bootstrap';
 
 const ProjectCard = ({ title, imgUrl }) => {
-  const { currentHover, handleHoverProj } = useStateContext();
+  const { handleHoverProj } = useStateContext();
   const handleHover = () => handleHoverProj(title);
 
   return (
-    <article
-      className={`proj-imgbx ${
-        currentHover && currentHover !== title ? 'd-none' : ''
-      } ${currentHover && currentHover === title ? 'd-invisible-proj' : ''}`}
-      onClick={handleHover}
-    >
+    <article className={`proj-imgbx `} onClick={handleHover}>
       <Card>
         <Card.Img src={imgUrl} />
         <Card.ImgOverlay>
