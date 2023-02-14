@@ -1,6 +1,6 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.png';
 import logoA from '../../assets/img2/logoNavbar2.png';
@@ -98,7 +98,7 @@ function NavBar() {
               `}
                 onClick={() => onUpdateActiveLink('simpleProjects')}
               >
-                simple Projects
+                Simple Projects
               </Link>
             </Nav>
             <span className="navbar-text">

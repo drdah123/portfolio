@@ -12,14 +12,18 @@ import './Banner.css';
 const Banner = () => {
   const [text, setText] = useState('');
   const [textCv, setTextCv] = useState('');
-  const headRotate = ['Frontend developer', 'Full stack developer'];
+  const headRotate = [
+    'Frontend developer',
+    'Full stack developer',
+    'open source contributor',
+  ];
   const cvRotate = [
     'simple guy want to explore a new things',
     'My old is 24',
     ' I am living in Saudi Arabia ',
-    'I started actually learning in 6/2022',
-    'I Learned many things about javascript',
-    'Now I am learning ui ux design, Web3, Typescript, React native and some of Machine learning (Tensorflow.js)',
+    'I started learning in 3/2022',
+    'I Learned many things about Javascript,Typescript, React ',
+    'And some of ui ux design, Web3, React native, Flutter, PHP open source projects and some of Machine learning (Tensorflow.js)',
   ];
 
   return (
@@ -38,15 +42,13 @@ const Banner = () => {
                     }
                   >
                     <span className="tagline">Welcome to my portfolio </span>
-                    <h1>
+                    <h1 className="banner-text-head-rotate">
                       {`Hey I am abdalrahman`}{' '}
-                      <span className="banner-wrap">
-                        <BannerText
-                          toRotate={headRotate}
-                          text={text}
-                          setText={setText}
-                        />
-                      </span>
+                      <BannerText
+                        toRotate={headRotate}
+                        text={text}
+                        setText={setText}
+                      />
                     </h1>
                     <p>
                       <BannerText

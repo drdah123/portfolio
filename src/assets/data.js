@@ -268,6 +268,8 @@ export const SkillsData = [
   { name: 'VUE JS', rate: 60 },
   { name: 'REACT REDUX', rate: 80 },
   { name: 'REACT MOBX', rate: 0 },
+  { name: 'FLUTTER', rate: 0 },
+  { name: 'PHP', rate: 0 },
 ];
 
 let reactProject = projectsFrontend;
