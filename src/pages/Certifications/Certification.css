@@ -1,0 +1,58 @@
+.card-certification-container {
+  margin: 10rem 0 !important;
+  padding: 0 5rem;
+  color: #000;
+  width: 100vw !important;
+  overflow-x: hidden !important;
+}
+.card-certification {
+  margin-top: 5vh !important;
+}
+
+.single-project {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.single-project img {
+  height: 70vh;
+}
+.single-project:hover img {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.projects-content {
+  position: absolute;
+  top: 80%;
+}
+
+@media (max-width: 720px) {
+  .single-project {
+    width: 100vw;
+  }
+  .card-certification-container {
+    padding: 0;
+  }
+}
+
+.gallery-move-container {
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+  overflow: hidden;
+}
+.gallery-move-container div {
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+.gallery-move-list img {
+  height: 25vh;
+  object-fit: cover;
+}
+
+.gallery-move-list img:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}

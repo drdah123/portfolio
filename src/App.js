@@ -1,15 +1,22 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar/NavBar';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loading from 'react-loading';
+// import GalleryMove from './components/GalleryMove';
+// import CarouselProjects from './components/CarouselProjects';
 
-const Projects = lazy(() => import('./pages/Projects'));
-const Skills = lazy(() => import('./pages/Skills'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Banner = lazy(() => import('./pages/Banner'));
-const Certifications = lazy(() => import('./pages/Certifications'));
+const Projects = lazy(() => import('./pages/Projects/Projects'));
+const Skills = lazy(() => import('./pages/Skills/Skills'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Banner = lazy(() => import('./pages/Banner/Banner'));
+const Certifications = lazy(() =>
+  import('./pages/Certifications/Certifications')
+);
+const SimpleProjects = lazy(() =>
+  import('./pages/simpleProjects/SimpleProjects')
+);
 
 function App() {
   return (
@@ -31,6 +38,7 @@ function App() {
             <Route path="/project" exact element={<Projects />} />
             <Route path="/contact" exact element={<Contact />} />
             <Route path="/certification" exact element={<Certifications />} />
+            <Route path="/simple-projects" exact element={<SimpleProjects />} />
           </Routes>
         </Suspense>
       </main>

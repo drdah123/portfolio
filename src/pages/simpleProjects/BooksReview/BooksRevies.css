@@ -1,0 +1,111 @@
+.wrap {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 550px;
+  height: 500px;
+  overflow-y: hidden;
+  color: #000;
+  margin: auto;
+}
+
+.strip {
+  display: grid;
+  grid-template-rows: 10% 60% 15% 15%;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 20%;
+  height: 0;
+  padding: 0 0.25rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-align: center;
+  opacity: 0;
+  transition: flex 0.3s ease-in-out;
+  position: relative;
+}
+.strip > * {
+  margin: auto;
+}
+.strip:hover {
+  transition: all 0.5s ease;
+  flex: 100%;
+}
+
+.one {
+  background: khaki;
+}
+.two {
+  background: lightcoral;
+}
+.three {
+  background: peru;
+}
+.four {
+  background: wheat;
+}
+.five {
+  background: tan;
+}
+
+.crown {
+  width: 50px;
+  font-size: 1.75rem;
+  font-weight: 100;
+  padding-bottom: 1rem;
+  border-bottom: 0.2vmin solid #000;
+}
+
+.strip h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1;
+  text-orientation: sideways;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  align-self: center;
+  opacity: 0;
+  transition: transform 0.2s ease-in-out;
+}
+.strip:hover h1 {
+  transform: rotate(-90deg) translateX(10rem);
+  z-index: 10;
+}
+@media (max-width: 760px) {
+  .strip:hover {
+    grid-template-rows: 10% 30% 15% 15%;
+  }
+}
+.strip h2 {
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  opacity: 0;
+}
+.strip h3 {
+  font-size: 0.8rem;
+  opacity: 0;
+}
+
+.review {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: ivory;
+  width: 95%;
+  height: 97%;
+  padding: 0 2rem;
+  color: #000;
+  opacity: 0;
+}
+.strip:hover .review {
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+}
+.review p {
+  margin-top: 5rem;
+  text-align: left;
+  font-size: 1rem;
+}

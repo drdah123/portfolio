@@ -94,7 +94,7 @@ export const projectsFrontend = [
     title: 'Lucid motors clone',
     imgUrl: lucidClone,
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
     appUrl: 'https://lucid-motors-clone.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/lucid-clone-js',
@@ -178,7 +178,7 @@ export const angularProject = [
   {
     title: 'Lucid clone',
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
 
     imgUrl: lucidClone,
     appUrl: 'https://lustrous-torrone-884988.netlify.app/',
@@ -189,7 +189,7 @@ export const VueProject = [
   {
     title: 'Lucid clone',
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel Swiper js Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
 
     imgUrl: lucidClone,
     appUrl: 'https://lucid-vue.onrender.com/',

@@ -1,0 +1,64 @@
+.progress-container {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+
+.progress-container p {
+  margin-top: 4.6%;
+}
+.progress {
+  width: 100%;
+  height: 0.45rem !important;
+  position: relative;
+  margin-left: 5%;
+}
+
+.progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #753aa2;
+  transition: all 0.4s ease-in-out;
+}
+.skill {
+  overflow: hidden;
+  position: relative;
+}
+.skill div:not(.stars) {
+  z-index: 10;
+}
+.skill-h2 {
+  font-size: 2.8rem;
+  width: 100%;
+  margin: 5% 0 5% 40%;
+}
+.skill-container p {
+  font-weight: 500;
+}
+.progress .progress-rate-80 {
+  width: 80%;
+}
+.progress .progress-rate-95 {
+  width: 95%;
+}
+.progress .progress-rate-90 {
+  width: 90%;
+}
+.progress .progress-rate-85 {
+  width: 85%;
+}
+.progress .progress-rate-75 {
+  width: 75%;
+}
+.progress .progress-rate-65 {
+  width: 65%;
+}
+.progress .progress-rate-60 {
+  width: 60%;
+}
+
+.progress .progress-rate-50 {
+  width: 50%;
+}

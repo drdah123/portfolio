@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
 
       setTimeout(() => {
         setCurrentHoverChanging(false);
-      }, 2000);
+      }, 1000);
     }
   };
   return (

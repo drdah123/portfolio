@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.1",
+    "gsap": "^3.11.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-bootstrap-icons": "^1.8.4",
@@ -25,6 +26,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "swiper": "^8.4.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
