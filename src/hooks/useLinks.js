@@ -6,10 +6,8 @@ function useLinks(refHr, refMenu, setActiveLink) {
 
   useEffect(() => {
     const curPath = window.location.hash.split('/')[1];
-    console.log('🚀 ~ file: NavBar.js:25 ~ useEffect ~ curPath', curPath);
     setActiveLink(curPath);
 
-    console.log(refHr);
     // make sure when click home the line disappear
     curPath
       ? (refHr.current.style.display = 'block')
