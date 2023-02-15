@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import TrackVisibility from 'react-on-screen';
 import Stars from '../../components/Stars/Stars';
@@ -17,11 +17,29 @@ const Projects = () => {
   const [text, setText] = useState('all');
   const [currentProject, setCurrentProject] = useState('all');
   const comingRotate = ['say it will coming soon...'];
+  const refProjChosen = useRef();
+  const refHr = useRef();
 
   const handleReact = (type) => {
     filterReactProject(type);
     setCurrentProject(() => type);
   };
+
+  useEffect(() => {
+    if (currentProject === 'redux') {
+      refHr.current.style.left = `${
+        refProjChosen.current.querySelectorAll('button')[0].offsetLeft - 10
+      }px`;
+    } else if (currentProject === 'mobX') {
+      refHr.current.style.left = `${
+        refProjChosen.current.querySelectorAll('button')[1].offsetLeft - 10
+      }px`;
+    } else {
+      refHr.current.style.left = `${
+        refProjChosen.current.querySelectorAll('button')[2].offsetLeft - 10
+      }px`;
+    }
+  }, [currentProject]);
 
   return (
     <section className="project" id="project">
@@ -74,29 +92,30 @@ const Projects = () => {
                       <Tab.Pane eventKey={key.key} key={key.key}>
                         <div className="d-flex align-items-center justify-content-center">
                           {key.key === 'first' ? (
-                            <div className="proj-choose-icon">
+                            <div
+                              className="proj-choose-icon"
+                              ref={refProjChosen}
+                            >
+                              <hr
+                                className="proj-choose-icon-active"
+                                ref={refHr}
+                              />
                               <ProjectFilterButton
-                                currentProject={
-                                  currentProject === 'redux' && true
-                                }
+                                currentProject={currentProject}
                                 img={redux}
                                 handleReact={handleReact}
                                 categoryName="redux"
                               />
 
                               <ProjectFilterButton
-                                currentProject={
-                                  currentProject === 'mobX' && true
-                                }
+                                currentProject={currentProject}
                                 img={mobX}
                                 handleReact={handleReact}
                                 categoryName="mobX"
                               />
 
                               <ProjectFilterButton
-                                currentProject={
-                                  currentProject === 'all' && true
-                                }
+                                currentProject={currentProject}
                                 img={
                                   <FontAwesomeIcon
                                     icon={faReact}

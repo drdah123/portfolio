@@ -1,9 +1,8 @@
 .stars {
   position: absolute;
-  top: 0%;
-  left: 0;
-  width: 75%;
-  height: 100%;
+  top: -20%;
+  width: 100%;
+  height: 135%;
   transform: rotate(-45deg);
   overflow: hidden;
 }
@@ -11,13 +10,14 @@
   top: 150%;
   overflow: hidden;
   left: 50%;
-  /* background: red; */
   height: 100vh;
   width: 100vw;
 }
 @media (max-width: 560px) {
   .stars {
-    top: 30%;
+    left: -50%;
+    height: 100%;
+    width: 200%;
   }
 }
 
@@ -396,7 +396,7 @@
 /************ Small Star Css ************/
 
 .small-night {
-  position: absolute; /* position: relative; */
+  position: absolute;
   width: 30%;
   height: 30%;
   transform: rotateZ(40deg);

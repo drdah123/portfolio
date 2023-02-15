@@ -112,7 +112,6 @@
 }
 .lets-connect:hover {
   color: #753aa2;
-  padding-top: 1rem;
 }
 .lets-connect {
   text-decoration: none;
@@ -126,4 +125,5 @@
 
 .lets-connect:hover svg {
   margin-top: 2rem;
+  transition: 0.25s;
 }

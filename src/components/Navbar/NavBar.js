@@ -5,11 +5,14 @@ import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.png';
 import logoA from '../../assets/img2/logoNavbar2.png';
 import './NavBar.css';
+import { useRef } from 'react';
+import useLinks from '../../hooks/useLinks';
 
 function NavBar() {
-  const [activeLink, setActiveLink] = useState('Home');
+  const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-
+  const refMenu = useRef();
+  const refHr = useRef();
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -18,15 +21,12 @@ function NavBar() {
         setScrolled(false);
       }
     };
-
     window.addEventListener('scroll', onScroll);
 
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  };
+  useLinks(refHr, refMenu, setActiveLink);
 
   return (
     <header>
@@ -34,11 +34,7 @@ function NavBar() {
         <Container>
           <Navbar.Brand>
             <h1>
-              <Link
-                to="/"
-                className="navbar navbar-brand"
-                onClick={() => onUpdateActiveLink('Home')}
-              >
+              <Link to="/" className="navbar navbar-brand">
                 <img src={logoA} alt="" />
               </Link>
             </h1>
@@ -47,15 +43,15 @@ function NavBar() {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" ref={refMenu}>
+              <hr className="proj-choose-icon-active-link" ref={refHr} />
               <Link
-                to="/skill"
+                to="/skills"
                 className={`nav-link 
                 ${
-                  activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'
+                  activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'
                 }
               `}
-                onClick={() => onUpdateActiveLink('Skills')}
               >
                 Skills
               </Link>
@@ -63,27 +59,25 @@ function NavBar() {
               <Link
                 className={`nav-link 
                  ${
-                   activeLink === 'Projects'
+                   activeLink === 'projects'
                      ? 'active navbar-link'
                      : 'navbar-link'
                  }
                `}
-                onClick={() => onUpdateActiveLink('Projects')}
-                to="/project"
+                to="/projects"
               >
                 Projects
               </Link>
 
               <Link
-                to="/Certification"
+                to="/certifications"
                 className={`nav-link 
                 ${
-                  activeLink === 'Certifications'
+                  activeLink === 'certifications'
                     ? 'active navbar-link'
                     : 'navbar-link'
                 }
               `}
-                onClick={() => onUpdateActiveLink('Certifications')}
               >
                 Certifications
               </Link>
@@ -91,12 +85,11 @@ function NavBar() {
                 to="/simple-projects"
                 className={`nav-link 
                 ${
-                  activeLink === 'simpleProjects'
+                  activeLink === 'simple-projects'
                     ? 'active navbar-link'
                     : 'navbar-link'
                 }
               `}
-                onClick={() => onUpdateActiveLink('simpleProjects')}
               >
                 Simple Projects
               </Link>

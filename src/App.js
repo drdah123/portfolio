@@ -34,10 +34,10 @@ function App() {
         >
           <Routes>
             <Route path="/" exact element={<Banner />} />
-            <Route path="/skill" exact element={<Skills />} />
-            <Route path="/project" exact element={<Projects />} />
+            <Route path="/skills" exact element={<Skills />} />
+            <Route path="/projects" exact element={<Projects />} />
             <Route path="/contact" exact element={<Contact />} />
-            <Route path="/certification" exact element={<Certifications />} />
+            <Route path="/certifications" exact element={<Certifications />} />
             <Route path="/simple-projects" exact element={<SimpleProjects />} />
           </Routes>
         </Suspense>

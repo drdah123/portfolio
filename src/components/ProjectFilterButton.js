@@ -1,24 +1,24 @@
 import React from 'react';
 
-const ProjectFilterButton = ({
+function ProjectFilterButton({
   currentProject,
   handleReact,
   img,
   categoryName,
-}) => {
+}) {
   return (
     <>
       <button
         className={`
-        ${currentProject ? 'active' : ''}
+        ${currentProject === categoryName ? 'active-filter' : ''}
         `}
-        onClick={() => handleReact(categoryName)}
+        onClick={(e) => handleReact(categoryName)}
         title={categoryName}
       >
         {categoryName === 'all' ? img : <img src={img} alt="" />}
       </button>
     </>
   );
-};
+}
 
 export default ProjectFilterButton;
