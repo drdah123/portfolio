@@ -61,7 +61,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: var(--ChineseBlack-color) !important;
   color: #fff !important;
   font-family: 'Merienda', cursive !important;
 }
@@ -127,4 +127,8 @@ p.success {
 
 p.danger {
   color: red;
+}
+
+.visible {
+  visibility: visible;
 }

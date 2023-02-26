@@ -2,7 +2,13 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import BannerText from './BannerText';
 
-const SkillsProject = ({ name, text, setText, comingRotate, rate }) => {
+export default function SkillsProject({
+  name,
+  text,
+  setText,
+  comingRotate,
+  rate,
+}) {
   return (
     <Col xl={6} md={6}>
       <div className="skill-container">
@@ -31,6 +37,4 @@ const SkillsProject = ({ name, text, setText, comingRotate, rate }) => {
       </div>
     </Col>
   );
-};
-
-export default SkillsProject;
+}

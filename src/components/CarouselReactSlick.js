@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import ProjectCard from './ProjectCard';
 import { CaretRightFill, CaretLeftFill } from 'react-bootstrap-icons';
+import { Col, Row } from 'react-bootstrap';
 
 const settings = {
   infinite: true,
@@ -34,15 +35,27 @@ const settings = {
   ],
 };
 
-const Carousel = ({ projects }) => {
+const Carousel = ({ projects, isCarousel }) => {
   return (
-    <Slider {...settings}>
-      {projects.map((item) => (
-        <React.Fragment key={item.title}>
-          <ProjectCard {...item} />
-        </React.Fragment>
-      ))}
-    </Slider>
+    <>
+      {isCarousel ? (
+        <Slider {...settings}>
+          {projects.map((item) => (
+            <React.Fragment key={item.title}>
+              <ProjectCard {...item} isCarousel={isCarousel} />
+            </React.Fragment>
+          ))}
+        </Slider>
+      ) : (
+        <Row className="ee">
+          {projects.map((item) => (
+            <Col md={6} lg={4} key={item.title}>
+              <ProjectCard {...item} isCarousel={isCarousel} />
+            </Col>
+          ))}
+        </Row>
+      )}
+    </>
   );
 };
 

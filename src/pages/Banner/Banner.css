@@ -8,6 +8,8 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  visibility: hidden;
+  transition: 1s;
 }
 .banner div {
   z-index: 10;
@@ -108,10 +110,10 @@
 }
 
 .banner-text-head-rotate label {
-  color: #0ccccc;
+  color: var(--Aqua-color);
 }
 .lets-connect:hover {
-  color: #753aa2;
+  color: var(--Monochromatic-color);
 }
 .lets-connect {
   text-decoration: none;

@@ -111,8 +111,10 @@ function NavBar() {
                   <img src={navIcon2} alt="" />
                 </a>
               </div>
-              <Link className="vvd" to="/contact">
-                <span>lets connect</span>
+              <Link className="glowing-btn" to="/contact">
+                <span className="glowing-txt">
+                  <span className="faulty-letter">LETS </span>CONNECT
+                </span>
               </Link>
             </span>
           </Navbar.Collapse>

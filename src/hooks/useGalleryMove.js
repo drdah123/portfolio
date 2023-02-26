@@ -5,7 +5,8 @@ function useGalleryMove(
   itemsArray,
   setItemsArray,
   refUl,
-  translate
+  translate,
+  isVisible
 ) {
   useEffect(() => {
     const container = containerRef.current.getBoundingClientRect();
@@ -33,12 +34,6 @@ function useGalleryMove(
           getOffset(refPosition).top >= rowNum * dividedHeight + container.top;
 
         let num = getOffset(refPosition).left - translate[index].x;
-        // if (isRowNum) {
-        //   console.log(
-        //     '🚀 ~ file: useGalleryMove.js:43 ~ translate.map ~ isRowNum',
-        //     isRowNum
-        //   );
-        // }
 
         return !isRowNum
           ? item
@@ -84,11 +79,10 @@ function useGalleryMove(
       setTimeout(() => verticalMove(3), 10000);
       setTimeout(() => verticalMove(1), 15000);
     }
-    setTimOfMovement();
-
-    setInterval(() => {
-      setTimOfMovement();
-    }, 20000);
+    // setTimOfMovement();
+    // const setI = setInterval(() => {
+    //   setTimOfMovement();
+    // }, 20000);
 
     function verticalMove(col) {
       let colNum = col - 1;
@@ -102,13 +96,6 @@ function useGalleryMove(
             colNum * dividedWidth + container.left &&
           getOffset(refPosition).left <=
             colNum * dividedWidth + container.left + 20;
-
-        // if (isColNum) {
-        //   console.log(
-        //     '🚀 ~ file: useGalleryMove.js:111 ~ translate.map ~ isColNum',
-        //     isColNum
-        //   );
-        // }
 
         return !isColNum
           ? item

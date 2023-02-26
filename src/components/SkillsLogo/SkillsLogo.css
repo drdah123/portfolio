@@ -35,10 +35,11 @@
     top: -90vh;
     left: 45vw;
   }
-  .skill-h2 {
-    margin-right: 5vw;
-    padding: 5vh 0 60vh 0;
-    transform: translate(-15vw, 10px);
+  .skill-bio {
+    margin-bottom: 110%;
+  }
+  .cubespinner-container {
+    top: 55%;
   }
   .skill-container {
     width: 80vw;

@@ -21,11 +21,17 @@ import {
   faReact,
   faAngular,
 } from '@fortawesome/free-brands-svg-icons';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
-const SkillsLogo = () => {
+const SkillsLogo = ({ isVisible }) => {
   return (
-    <Col className="cubespinner-container">
+    <Col
+      className={`cubespinner-container ${
+        isVisible
+          ? 'animate__animated animate__fadeInLeftBig animate__slow '
+          : ''
+      }`}
+    >
       <div className="cubespinner">
         <div className="face1">
           <FontAwesomeIcon icon={faGitAlt} color="#DD0031" />

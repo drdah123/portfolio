@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { certifications } from '../../assets/data';
 import Stars from '../../components/Stars/Stars';
 import './Certification.css';
+import useVisibility from '../../hooks/useVisibility';
 
 const Certifications = () => {
+  const refContainer = useRef();
+  const [isVisible, setIsVisibility] = useState(false);
+
+  useVisibility(refContainer, setIsVisibility);
   return (
-    <Row className="card-certification-container">
-      {/* <Stars background />
-      <Stars background bottom /> */}
+    <div
+      className={`card-certification-container row ${
+        isVisible
+          ? 'animate__animated animate__fadeInRightBig animate__slower visible'
+          : ''
+      }`}
+      ref={refContainer}
+    >
+      <Stars background />
+      <Stars background bottom />
       {certifications.map((item, i) => (
-        <Col xl={6} key={i} className="card-certification">
+        <Col sm={6} md={4} lg={3} key={i} className="card-certification">
           <article>
             <Card className="single-project">
               <Card.Img src={item.img} />
@@ -29,7 +41,7 @@ const Certifications = () => {
           </article>
         </Col>
       ))}
-    </Row>
+    </div>
   );
 };
 

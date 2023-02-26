@@ -19,21 +19,25 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #753aa2;
+  background-color: var(--Monochromatic-color);
   transition: all 0.4s ease-in-out;
 }
 .skill {
   overflow: hidden;
   position: relative;
+  visibility: hidden;
 }
+
 .skill div:not(.stars) {
   z-index: 10;
 }
 .skill-h2 {
   font-size: 2.8rem;
   width: 100%;
-  margin: 5% 0 5% 40%;
+  margin-top: 100px;
+  text-align: center;
 }
+
 .skill-container p {
   font-weight: 500;
 }
@@ -61,4 +65,16 @@
 
 .progress .progress-rate-50 {
   width: 50%;
+}
+.skill-bio {
+  text-align: center;
+  background: #232323;
+  width: fit-content;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.skills-list {
+  padding-right: 2.5rem;
 }

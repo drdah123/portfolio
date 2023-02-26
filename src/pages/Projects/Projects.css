@@ -5,7 +5,7 @@
   }
 }
 .slick-dots li button:before {
-  color: #0ccccc;
+  color: var(--Aqua-color);
   opacity: 1;
 }
 .slick-dots {
@@ -14,7 +14,7 @@
 }
 
 .slick-dots li.slick-active button:before {
-  color: #753aa2;
+  color: var(--Monochromatic-color);
   opacity: 1;
 }
 .proj-choose-icon .active-filter {
@@ -35,7 +35,9 @@
   position: relative;
   background-color: black;
   overflow: hidden;
+  visibility: hidden;
 }
+
 .proj-choose-icon {
   width: 100vw;
   display: flex;
@@ -121,7 +123,11 @@
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(
+    90.21deg,
+    var(--DeepCarminePink-color) -5.91%,
+    var(--BlueyPurple-color) 111.58%
+  );
   top: 0;
   left: 0;
   z-index: -1;
@@ -143,12 +149,13 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  color: #0ccccc;
+  color: var(--Aqua-color);
   z-index: 9999;
   margin-top: 10px;
 }
 .proj-imgbx img {
-  height: 200px;
+  /* height: 200px; */
+  object-fit: cover;
 }
 
 .proj-imgbx .d-none {
@@ -168,7 +175,6 @@
   transform: translate(-50%, -50%);
 }
 .card-details-proj .col .card {
-  /* width: 100%; */
   padding: -200px !important;
 }
 
@@ -190,8 +196,8 @@
 }
 .card-details-proj-links .first-link {
   text-decoration: none !important;
-  color: #121212;
-  background: #753aa2;
+  color: var(--ChineseBlack-color);
+  background: var(--Monochromatic-color);
   padding: 1% 2%;
   border-radius: 3px;
 }
@@ -201,7 +207,6 @@
 
 .card-details-proj-links img {
   border: 1px solid #fff;
-
   border-radius: 50%;
 }
 .card-details-proj-links a:hover img {
@@ -211,8 +216,8 @@
 .proj-txtx a {
   display: none;
   text-decoration: none;
-  background-color: #121212;
-  color: #aa367c;
+  background-color: var(--ChineseBlack-color);
+  color: var(--DeepCarminePink-color);
   margin: auto;
   width: fit-content;
   opacity: 0.7;
@@ -249,4 +254,20 @@
   width: 35%;
   right: 0;
   z-index: -4;
+}
+.card-body p {
+  font-size: 1rem;
+  width: 100%;
+  text-overflow: clip;
+}
+.card-img {
+  width: 100%;
+}
+
+.btn-change-projects-display button {
+  background: #000 !important;
+  margin: -1rem 0 1.5rem 0;
+}
+.btn-change-projects-display button:hover {
+  background: var(--ChineseBlack-color) !important;
 }

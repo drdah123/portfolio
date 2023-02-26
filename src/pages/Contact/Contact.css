@@ -1,5 +1,9 @@
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(
+    90.21deg,
+    var(--DeepCarminePink-color) -5.91%,
+    var(--BlueyPurple-color) 111.58%
+  );
   padding: 60px 0 200px 0;
 }
 
@@ -26,13 +30,13 @@
   font-size: 1.1rem;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
-  caret-color: #aa367c;
+  caret-color: var(--DeepCarminePink-color);
 }
 
 .contact form input:focus,
 .contact form textarea:focus {
   background: rgba(255, 255, 255, 1);
-  color: #121212;
+  color: var(--ChineseBlack-color);
 }
 
 .contact form input::placeholder,
@@ -44,7 +48,7 @@
 
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
-  color: #121212;
+  color: var(--ChineseBlack-color);
   opacity: 0.8;
 }
 
@@ -71,7 +75,7 @@
 
 .contact form button::before {
   content: '';
-  background: #121212;
+  background: var(--ChineseBlack-color);
   width: 0;
   height: 100%;
   position: absolute;
@@ -97,7 +101,7 @@ footer {
 .newsletter-bx {
   background: #ffffff;
   border-radius: 55px;
-  color: #121212;
+  color: var(--ChineseBlack-color);
   padding: 85px 150px;
   margin: -120px auto 80px auto;
 }
@@ -136,7 +140,11 @@ footer {
 
 .new-email-bx::before {
   content: '';
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(
+    90.21deg,
+    var(--DeepCarminePink-color) -5.91%,
+    var(--BlueyPurple-color) 111.58%
+  );
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -160,17 +168,21 @@ footer {
 
 .new-email-bx input {
   width: 100%;
-  color: #121212;
+  color: var(--ChineseBlack-color);
   font-weight: 500;
   background: transparent;
   border: 0;
   font-size: x-large;
   padding: 0 15px;
-  caret-color: #aa367c;
+  caret-color: var(--DeepCarminePink-color);
 }
 
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(
+    90.21deg,
+    var(--DeepCarminePink-color) -5.91%,
+    var(--BlueyPurple-color) 111.58%
+  );
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -185,7 +197,7 @@ footer {
   }
   .new-email-bx input {
     width: 190%;
-    color: #121212;
+    color: var(--ChineseBlack-color);
     font-weight: 500;
     background: transparent;
     border: 0;

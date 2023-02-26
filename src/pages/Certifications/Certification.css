@@ -4,6 +4,7 @@
   color: #000;
   width: 100vw !important;
   overflow-x: hidden !important;
+  visibility: hidden;
 }
 .card-certification {
   margin-top: 5vh !important;
@@ -15,7 +16,8 @@
   cursor: pointer;
 }
 .single-project img {
-  height: 70vh;
+  height: 20rem;
+  object-fit: cover;
 }
 .single-project:hover img {
   transform: scale(1.2);
@@ -24,13 +26,10 @@
 
 .projects-content {
   position: absolute;
-  top: 80%;
+  top: 75%;
 }
 
-@media (max-width: 720px) {
-  .single-project {
-    width: 100vw;
-  }
+@media (max-width: 770px) {
   .card-certification-container {
     padding: 0;
   }

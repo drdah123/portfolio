@@ -22,3 +22,10 @@ code {
 
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
+:root {
+  --Monochromatic-color: #753aa2;
+  --Aqua-color: #0ccccc;
+  --DeepCarminePink-color: #aa367c;
+  --ChineseBlack-color: #121212;
+  --BlueyPurple-color: #4a2fbd;
+}

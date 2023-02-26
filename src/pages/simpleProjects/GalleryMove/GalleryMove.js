@@ -2,16 +2,20 @@ import React, { createRef, useMemo, useRef, useState } from 'react';
 import { projectsFrontend, projectsFullStack } from '../../../assets/data';
 import useGalleryMove from '../../../hooks/useGalleryMove';
 import './GalleryMove.css';
+import useVisibility from '../../../hooks/useVisibility';
 
 function GalleryMove() {
   let createRefMap = [];
 
   const [itemsArray, setItemsArray] = useState([]);
   const [translate, setTranslate] = useState([]);
+  const [isVisible, setVisibility] = useState(false);
 
   let projects = [...projectsFrontend, ...projectsFullStack];
   const refUl = useRef(createRefMap);
   const containerRef = useRef(null);
+
+  useVisibility(containerRef, setVisibility);
 
   useMemo(() => {
     for (let index = 0; index < projects.length; index++) {
@@ -32,7 +36,14 @@ function GalleryMove() {
     }
   }, []);
 
-  useGalleryMove(containerRef, itemsArray, setItemsArray, refUl, translate);
+  useGalleryMove(
+    containerRef,
+    itemsArray,
+    setItemsArray,
+    refUl,
+    translate,
+    isVisible
+  );
 
   return (
     <div

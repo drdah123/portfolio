@@ -291,29 +291,29 @@ export const tabKeys = [
   {
     key: 'first',
     title: 'React JS',
-    component: () => {
-      return <Carousel projects={reactProject} />;
+    component: (isCarousel) => {
+      return <Carousel projects={reactProject} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'second',
     title: 'Full stack React',
-    component: () => {
-      return <Carousel projects={projectsFullStack} />;
+    component: (isCarousel) => {
+      return <Carousel projects={projectsFullStack} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'third',
     title: 'Angular JS',
-    component: () => {
-      return <Carousel projects={angularProject} />;
+    component: (isCarousel) => {
+      return <Carousel projects={angularProject} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'forth',
     title: 'Vue JS',
-    component: () => {
-      return <Carousel projects={VueProject} />;
+    component: (isCarousel) => {
+      return <Carousel projects={VueProject} isCarousel={isCarousel} />;
     },
   },
   {
