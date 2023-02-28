@@ -4,7 +4,7 @@
 nav.navbar {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -20%;
   z-index: 9999;
   text-align: center;
 
@@ -15,14 +15,11 @@ nav.navbar .navbar-brand {
   margin-right: 40px;
 }
 
-@media (max-width: 990px) {
-  nav.navbar {
-    background-color: var(--ChineseBlack-color);
-  }
-}
-
 nav.navbar.scrolled {
-  background-color: var(--ChineseBlack-color);
+  top: 0;
+}
+nav.navbar.scrolled.scrolledBG {
+  background-color: var(--ChineseBlack-color) !important;
 }
 
 .navbar-link,

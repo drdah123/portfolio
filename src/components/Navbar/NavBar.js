@@ -10,16 +10,27 @@ import useLinks from '../../hooks/useLinks';
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
+  const [scrolledBG, setScrolledBG] = useState(false);
   const refMenu = useRef();
   const refHr = useRef();
+
   useEffect(() => {
+    let prevScrollY = window.scrollY;
+
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY < prevScrollY) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
+      if (window.scrollY > 50) {
+        setScrolledBG(true);
+        console.log('scrolledBG is true');
+      } else {
+        setScrolledBG(false);
+      }
+      prevScrollY = window.scrollY;
     };
     window.addEventListener('scroll', onScroll);
 
@@ -30,7 +41,12 @@ function NavBar() {
 
   return (
     <header>
-      <Navbar expand="lg" className={scrolled ? 'scrolled ' : ''}>
+      <Navbar
+        expand="lg"
+        className={`${scrolled ? 'scrolled ' : ''} ${
+          scrolledBG ? 'scrolledBG' : ''
+        }`}
+      >
         <Container>
           <Navbar.Brand>
             <h1>

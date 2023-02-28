@@ -4,9 +4,9 @@
   height: 1rem;
 }
 
-.progress-container p {
+/* .progress-container p {
   margin-top: 4.6%;
-}
+} */
 .progress {
   width: 100%;
   height: 0.45rem !important;
@@ -67,12 +67,26 @@
   width: 50%;
 }
 .skill-bio {
-  text-align: center;
   background: #232323;
   width: fit-content;
   margin: 1rem auto;
   border-radius: 1rem;
   padding: 1rem;
+}
+.skill-bio .skill-bio-list .skill-bio-list-item-goal {
+  list-style-type: '🎯 ';
+}
+.skill-bio .skill-bio-list .skill-bio-list-item-love {
+  list-style-type: '❤️ ';
+}
+.skill-bio .skill-bio-list .skill-bio-list-item-started {
+  list-style-type: '🏁 ';
+}
+.skill-bio .skill-bio-list .skill-bio-list-item-assessment {
+  list-style-type: '⚠️ ';
+}
+.skill-bio h3 {
+  text-align: center;
 }
 
 .skills-list {

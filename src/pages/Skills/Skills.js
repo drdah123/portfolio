@@ -15,13 +15,21 @@ function SkillsBio() {
     <>
       <Col className="skill-bio">
         <h3>I love building stuff </h3>
-        <p>
-          My goal is to be one of 10 the best programmers in history
-          <br /> also I love learn or explore a new new things
-          <br />I started learning Javascript and Typescript in 3/2022 and since
-          that I building many projects by many libraries and tools <br />* all
-          assessments from what I think about my skills
-        </p>
+        <ul className="skill-bio-list">
+          <li className="skill-bio-list-item-goal">
+            My goal is to be one of 10 the best programmers in all the history
+          </li>
+          <li className="skill-bio-list-item-love">
+            also I love learn or explore a new new things
+          </li>
+          <li className="skill-bio-list-item-started">
+            I started learning Javascript and Typescript in 3/2022 and since
+            that I building many projects by many libraries and tools
+          </li>{' '}
+          <li className="skill-bio-list-item-assessment">
+            all assessments from what I think about my skills
+          </li>
+        </ul>
       </Col>
     </>
   );

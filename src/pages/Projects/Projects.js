@@ -12,7 +12,6 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import ProjectCardDetails from '../../components/ProjectCardDetails';
 import ProjectFilterButton from '../../components/ProjectFilterButton';
 import useVisibility from '../../hooks/useVisibility';
-import ProjectCard from '../../components/ProjectCard';
 
 const Projects = () => {
   const [text, setText] = useState('all');
@@ -64,7 +63,7 @@ const Projects = () => {
                   : ''
               }`}
             >
-              <h2 style={{ marginBottom: 50 }}>Projects </h2>
+              <h2>Projects </h2>
               <p>
                 *notice: there is projects have the same appearance but by
                 deferent tools like amazon clone built by Redux state

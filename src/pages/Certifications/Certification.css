@@ -3,7 +3,7 @@
   padding: 0 5rem;
   color: #000;
   width: 100vw !important;
-  overflow-x: hidden !important;
+  overflow: hidden !important;
   visibility: hidden;
 }
 .card-certification {
