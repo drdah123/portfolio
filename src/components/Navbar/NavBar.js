@@ -29,6 +29,7 @@ function NavBar() {
         console.log('scrolledBG is true');
       } else {
         setScrolledBG(false);
+        setScrolled(true);
       }
       prevScrollY = window.scrollY;
     };

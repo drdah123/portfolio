@@ -72,8 +72,9 @@
   z-index: 10;
 }
 @media (max-width: 760px) {
-  .strip:hover {
-    grid-template-rows: 10% 30% 15% 15%;
+  .strip:hover h1 {
+    margin-top: 2rem;
+    margin-left: 7.5rem;
   }
 }
 .strip h2 {
