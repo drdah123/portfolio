@@ -1,6 +1,6 @@
 # My Portfolio
 
-[![GitHub My contributions](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://protofile.onrender.com/#/projects)
+[![GitHub My contributions]](https://protofile.onrender.com/#/projects)
 [![Preview](https://github.com/drdah123/portfolio/blob/main/src/assets/img2/basicPortfolio.png)](https://protofile.onrender.com/)
 
 Introduction
