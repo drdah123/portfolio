@@ -22,6 +22,8 @@ import PrinciplesUX_UI from './pdf/principles of UX UI Design.jpeg';
 import Capstone from './pdf/Front-End Developer Capstone.jpeg';
 import Carousel from '../components/CarouselReactSlick';
 import agileProjectMangement from './pdf/agile project mangement.jpeg';
+import reactSlick from './img2/react-slick.png';
+import basicPortfolio from './img2/basicPortfolio.png';
 
 export const certifications = [
   {
@@ -91,10 +93,29 @@ export const certifications = [
 
 export const projectsFrontend = [
   {
+    title: 'Basic Portfolio',
+    description:
+      'Site with great animations, my projects and many simple projects',
+    imgUrl: basicPortfolio,
+    technology: [
+      'Email JS',
+      'fortawesome',
+      'Animate.css',
+      'Bootstrap',
+      'Gsap',
+      'React beautiful dnd',
+      'React slick',
+    ],
+    appUrl: '',
+    class: 'basic',
+    gitUrl: 'https://github.com/drdah123/portfolio',
+  },
+  {
     title: 'Lucid motors clone',
     imgUrl: lucidClone,
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel swiper JS Library with loop, blur background, change design by dynamic menu and pictures',
+    technology: ['Swiper JS', 'Animate.css'],
     appUrl: 'https://lucid-motors-clone.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/lucid-clone-js',
@@ -103,6 +124,7 @@ export const projectsFrontend = [
     title: 'Weather App',
     imgUrl: weatherApp,
     description: 'simple weather app with rapidAPI work with fetch data',
+    technology: ['RapidAPI'],
     appUrl: 'https://weeatherapp0.netlify.app/',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/weather-app',
@@ -112,6 +134,7 @@ export const projectsFrontend = [
     description:
       'frontend Dashboard uses syncfusion library, Injected component and services, useContext, theme, tailwind and responsive',
     imgUrl: dashboard,
+    technology: ['Tailwindcss', 'Syncfusion ej2'],
     appUrl: 'https://dashboard-j5gx.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/dashboardd',
@@ -120,6 +143,7 @@ export const projectsFrontend = [
     title: 'Quiz app',
     description: 'simple quiz app with rapidAPI',
     imgUrl: quizApp,
+    technology: ['Material UI', 'RapidAPI'],
     appUrl: 'https://quiz-abdalrahman.onrender.com/',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/quiz-app',
@@ -128,6 +152,7 @@ export const projectsFrontend = [
     title: 'Memory game',
     description: 'Game web app',
     imgUrl: meoryGame,
+    technology: [],
     appUrl: 'https://meory-game-abdlarahman.onrender.com/',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/memory-game',
@@ -136,14 +161,16 @@ export const projectsFrontend = [
     title: 'Portfolio',
     description: 'Site with animation',
     imgUrl: protfolioanimation,
+    technology: ['SCSS'],
     appUrl: 'https://protfolioanimations.netlify.app/',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/protofilio-animation',
   },
   {
     title: 'Calendar',
-    description: 'simple calendar with dayjs library',
+    description: 'simple calendar with day JS library',
     imgUrl: calendar,
+    technology: ['craco', 'day JS', 'Tailwindcss'],
     appUrl: 'https://abdulrahmancalendar.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/google-calendar-clone',
@@ -152,6 +179,7 @@ export const projectsFrontend = [
     title: 'Youtube clone',
     description: '',
     imgUrl: yuotubeClone,
+    technology: ['emotion', 'Material UI'],
     appUrl: 'https://youtube-clone-n9ry.onrender.com',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/youtube-clone',
@@ -160,6 +188,7 @@ export const projectsFrontend = [
     title: 'Simple cart',
     description: 'Simple cart by state management Redux-React',
     imgUrl: ReduxCart,
+    technology: ['React Redux', 'Emotion', 'Bootstrap'],
     appUrl: 'https://react-redux-simple-cart.onrender.com',
     class: 'redux',
     gitUrl: 'https://github.com/drdah123/react_redux_simple_cart',
@@ -168,6 +197,16 @@ export const projectsFrontend = [
     title: 'amazon clone by Redux',
     description: 'big project by state management Redux-React',
     imgUrl: amazona,
+    technology: [
+      'React toastify',
+      'React Redux',
+      'React helmet async',
+      'React google charts',
+      'Axios',
+      'Bootstrap',
+      'React paypal JS',
+      'api React google maps ',
+    ],
     appUrl: 'https://amazon-frontend-redux.onrender.com',
     class: 'redux',
     gitUrl: 'https://github.com/drdah123/amazon-frontend-Redux',
@@ -178,9 +217,10 @@ export const angularProject = [
   {
     title: 'Lucid clone',
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel swiper js Library with loop, blur background, change design by dynamic menu and pictures',
 
     imgUrl: lucidClone,
+    technology: [],
     appUrl: 'https://lustrous-torrone-884988.netlify.app/',
     gitUrl: 'https://github.com/drdah123/lucid-angular/tree/main',
   },
@@ -189,38 +229,75 @@ export const VueProject = [
   {
     title: 'Lucid clone',
     description:
-      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel react-slick Library with loop, blur background, change design by dynamic menu and pictures',
+      'imitation lucid-motors home page, this lucid clone has good template, responsive,use carousel swiper js Library with loop, blur background, change design by dynamic menu and pictures',
 
     imgUrl: lucidClone,
+    technology: [],
     appUrl: 'https://lucid-vue.onrender.com/',
     gitUrl: 'https://github.com/drdah123/lucid-vue/tree/main',
   },
 ];
-export const projectsFullStack = [
+export const fullStackProjects = [
   {
     name: 'Amazona-clone',
     imgUrl: amazona,
     title: 'Amazona-clone',
 
     description: 'Full stack Ecommerce',
+    technology: [
+      'React',
+      'Node js',
+      'React toastify',
+      'React Redux',
+      'React helmet async',
+      'React google charts',
+      'Axios',
+      'Bootstrap',
+      'React paypal JS',
+      'api React google maps ',
+      'cloudinary',
+      'bcrypt JS',
+      'dotenv',
+      'express-async-handler',
+      'Jsonwebtoken',
+      'mailgun JS',
+      'multer',
+      'streamifier',
+      'mongoose',
+    ],
     appUrl: 'https://mern-amazona.onrender.com/',
     gitUrl: 'https://github.com/drdah123/frontend',
     gitUrlB: 'https://github.com/drdah123/backend-amazon',
   },
-  {
-    name: 'Medical page',
-    imgUrl: medicalChat,
-    title: 'Medical page',
+  // {
+  //   name: 'Medical page',
+  //   imgUrl: medicalChat,
+  //   title: 'Medical page',
 
-    description: 'Full medical Page has real time chating',
-    appUrl: 'https://medical-pager-chatt.netlify.app/',
-  },
+  //   description: 'Full medical Page has real time chating',
+  //   technology: [],
+  //   appUrl: 'https://medical-pager-chatt.netlify.app/',
+  // },
   {
     name: 'Note-app',
     imgUrl: noteApp,
     title: 'Note-app',
 
     description: 'Full stack note app',
+    technology: [
+      'React',
+      'Node JS',
+      'Axios',
+      'bcrypt',
+      'Express JS',
+      'React Bootstrap',
+      'cors',
+      'dotenv',
+      'Express async handler',
+      'Jsonwebtoken',
+      'mongoose',
+      'nodemon',
+    ],
     appUrl: 'https://note-frontend-cy93.onrender.com/',
     gitUrl: 'https://github.com/drdah123/note-frontend/tree/main',
     gitUrlB: 'https://github.com/drdah123/notes-backend',
@@ -231,6 +308,7 @@ export const projectsFullStack = [
     title: 'e-commerce-sanity',
 
     description: 'Full stack e-commerce sanity built by next.js',
+    technology: ['Next js', 'Sanity', 'Stripe'],
     appUrl: 'https://ecommerce-next-sanity-56vk0o5fv-drdah123.vercel.app/',
     gitUrl: 'https://github.com/drdah123/ecommerce-next-sanity',
   },
@@ -240,33 +318,56 @@ export const projectsFullStack = [
     title: 'twitter clone',
 
     description: 'Full stack twitter next.js with tailwind and recoil.js',
+    technology: [
+      'Next js',
+      'Framer motion',
+      'Firebase',
+      'Recoil',
+      'Tailwindcss',
+      'heroicons',
+    ],
     appUrl: 'https://twitter-clone-xi-hazel.vercel.app/',
     gitUrl: 'https://github.com/drdah123/twitter-clone',
   },
 ];
 
+export const contributionProjects = [
+  {
+    name: 'React slick',
+    imgUrl: reactSlick,
+    title: 'React slick carousel',
+    description:
+      'it is react library for make grate carousel with feature like infinite, autoplay, lazyLoad etc... . I change from class component to functional component with hooks, how to use loop with useEffect for sure the function get state update, also how to use ref with useImperativeHandle to make methods can call function inside component like custom next, before or stop and play autoplay, also use forwardRef and memo',
+    technology: [],
+    appUrl: '',
+    gitUrl: 'https://github.com/akiran/react-slick/pull/2225',
+  },
+];
+
 export const SkillsData = [
-  { name: 'HTML5', rate: 95 },
-  { name: 'CSS3', rate: 85 },
-  { name: 'JAVASCRIPT', rate: 90 },
-  { name: 'REACT JS', rate: 95 },
-  { name: 'NEXT JS', rate: 90 },
-  { name: 'NODE JS', rate: 80 },
-  { name: 'EXPRESS JS', rate: 80 },
-  { name: 'mongoDB JS', rate: 85 },
-  { name: 'MONGOOSE JS', rate: 90 },
-  { name: 'REACT NATIVE JS', rate: 75 },
+  { name: 'HTML5', rate: 75 },
+  { name: 'CSS3', rate: 80 },
+  { name: 'JAVASCRIPT', rate: 70 },
+  { name: 'REACT JS', rate: 80 },
+  { name: 'NEXT JS', rate: 65 },
+  { name: 'NODE JS', rate: 60 },
+  { name: 'EXPRESS JS', rate: 60 },
+  { name: 'mongoDB JS', rate: 60 },
+  { name: 'MONGOOSE JS', rate: 70 },
+  { name: 'REACT NATIVE JS', rate: 50 },
   { name: 'SOLIDITY JS', rate: 0 },
   { name: 'BOOTSTRAP', rate: 90 },
   { name: 'MATERIAL UI', rate: 80 },
-  { name: 'TYPESCRIPT', rate: 75 },
+  { name: 'TYPESCRIPT', rate: 65 },
   { name: 'UI UX DESIGN', rate: 0 },
   { name: 'TENSORFLOW JS', rate: 0 },
   { name: 'ALGORITHM JS', rate: 0 },
-  { name: 'GIT', rate: 90 },
-  { name: 'ANGULAR JS', rate: 65 },
-  { name: 'VUE JS', rate: 60 },
-  { name: 'REACT REDUX', rate: 80 },
+  { name: 'THREE JS', rate: 0 },
+  { name: 'REACT THREE FIBER JS', rate: 0 },
+  { name: 'GIT', rate: 80 },
+  { name: 'ANGULAR JS', rate: 40 },
+  { name: 'VUE JS', rate: 40 },
+  { name: 'REACT REDUX', rate: 65 },
   { name: 'REACT MOBX', rate: 0 },
   { name: 'FLUTTER', rate: 0 },
   { name: 'PHP', rate: 0 },
@@ -290,35 +391,40 @@ export const filterReactProject = (type) => {
 export const tabKeys = [
   {
     key: 'first',
+    title: 'Contributions',
+    component: (isCarousel) => {
+      return (
+        <Carousel projects={contributionProjects} isCarousel={isCarousel} />
+      );
+    },
+  },
+  {
+    key: 'second',
     title: 'React JS',
     component: (isCarousel) => {
       return <Carousel projects={reactProject} isCarousel={isCarousel} />;
     },
   },
   {
-    key: 'second',
+    key: 'third',
     title: 'Full stack React',
     component: (isCarousel) => {
-      return <Carousel projects={projectsFullStack} isCarousel={isCarousel} />;
+      return <Carousel projects={fullStackProjects} isCarousel={isCarousel} />;
     },
   },
   {
-    key: 'third',
-    title: 'Angular JS',
+    key: 'forth',
+    title: ' Angular JS ',
     component: (isCarousel) => {
       return <Carousel projects={angularProject} isCarousel={isCarousel} />;
     },
   },
   {
-    key: 'forth',
+    key: 'fifth',
     title: 'Vue JS',
     component: (isCarousel) => {
       return <Carousel projects={VueProject} isCarousel={isCarousel} />;
     },
-  },
-  {
-    key: 'fifth',
-    title: 'React games',
   },
   {
     key: 'sixth',

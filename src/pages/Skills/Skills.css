@@ -56,15 +56,20 @@
 .progress .progress-rate-75 {
   width: 75%;
 }
+.progress .progress-rate-70 {
+  width: 70%;
+}
 .progress .progress-rate-65 {
   width: 65%;
 }
 .progress .progress-rate-60 {
   width: 60%;
 }
-
 .progress .progress-rate-50 {
   width: 50%;
+}
+.progress .progress-rate-40 {
+  width: 40%;
 }
 .skill-bio {
   background: #232323;

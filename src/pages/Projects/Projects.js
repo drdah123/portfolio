@@ -106,7 +106,7 @@ const Projects = () => {
                       </Button>
                     </div>
                     <div className="d-flex align-items-center justify-content-center">
-                      {key.key === 'first' ? (
+                      {key.key === 'second' ? (
                         <div className="proj-choose-icon" ref={refProjChosen}>
                           <hr className="proj-choose-icon-active" ref={refHr} />
                           <ProjectFilterButton

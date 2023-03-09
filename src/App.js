@@ -1,11 +1,8 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/Navbar/NavBar';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loading from 'react-loading';
-// import GalleryMove from './components/GalleryMove';
-// import CarouselProjects from './components/CarouselProjects';
 
 const Projects = lazy(() => import('./pages/Projects/Projects'));
 const Skills = lazy(() => import('./pages/Skills/Skills'));

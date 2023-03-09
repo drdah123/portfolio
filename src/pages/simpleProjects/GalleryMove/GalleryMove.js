@@ -1,5 +1,5 @@
 import React, { createRef, useMemo, useRef, useState } from 'react';
-import { projectsFrontend, projectsFullStack } from '../../../assets/data';
+import { projectsFrontend, fullStackProjects } from '../../../assets/data';
 import useGalleryMove from '../../../hooks/useGalleryMove';
 import './GalleryMove.css';
 import useVisibility from '../../../hooks/useVisibility';
@@ -11,7 +11,7 @@ function GalleryMove() {
   const [translate, setTranslate] = useState([]);
   const [isVisible, setVisibility] = useState(false);
 
-  let projects = [...projectsFrontend, ...projectsFullStack];
+  let projects = [...projectsFrontend, ...fullStackProjects];
   const refUl = useRef(createRefMap);
   const containerRef = useRef(null);
 

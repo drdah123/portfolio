@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStateContext } from '../context/context';
-import { Card } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import navIcon2 from '../assets/img/nav-icon2.png';
 
 export default function ProjectCard({
@@ -10,9 +10,15 @@ export default function ProjectCard({
   description,
   appUrl,
   gitUrl,
+  technology,
 }) {
   const { handleHoverProj } = useStateContext();
   const handleHover = () => handleHoverProj(title);
+
+  function getTechnologyColor() {
+    let color;
+    return color;
+  }
 
   return (
     <article className={`proj-imgbx `} onClick={handleHover}>
@@ -27,12 +33,27 @@ export default function ProjectCard({
           </Card.ImgOverlay>
         ) : (
           <Card.Body>
-            <Card.Header>{title}</Card.Header>
+            <Card.Title>{title}</Card.Title>
             <Card.Text className="text-sm22">{description}</Card.Text>
+
+            <Col className="mb-2">
+              {technology?.map((item, i) => (
+                <Button
+                  style={{ color: '#000' }}
+                  className={`proj-card-category-item ${
+                    i % 2 === 0 ? 'proj-card-category-item-bg' : ''
+                  }`}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Col>
             <div className="card-details-proj-links">
-              <Card.Link target="_blank" href={appUrl} className="first-link">
-                Demo
-              </Card.Link>
+              {appUrl ? (
+                <Card.Link target="_blank" href={appUrl} className="first-link">
+                  Demo
+                </Card.Link>
+              ) : null}
               <Card.Link target="_blank" href={gitUrl} className="">
                 {' '}
                 <img src={navIcon2} alt="" />

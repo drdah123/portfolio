@@ -47,7 +47,7 @@ const Carousel = ({ projects, isCarousel }) => {
           ))}
         </Slider>
       ) : (
-        <Row className="ee">
+        <Row>
           {projects.map((item) => (
             <Col md={6} lg={4} key={item.title}>
               <ProjectCard {...item} isCarousel={isCarousel} />

@@ -78,7 +78,6 @@
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 0.9rem auto 1.8rem auto;
-  text-align: center;
   width: 56%;
 }
 
@@ -270,4 +269,12 @@
 }
 .btn-change-projects-display button:hover {
   background: var(--ChineseBlack-color) !important;
+}
+
+.proj-card-category-item {
+  margin: 0.1rem 0.3rem;
+  background: #4a2fbd;
+}
+.proj-card-category-item-bg {
+  background: var(--BlueyPurple-sub-color);
 }

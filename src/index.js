@@ -6,6 +6,7 @@ import { ContextProvider } from './context/context';
 import App from './App';
 import 'swiper/swiper-bundle.css';
 import 'animate.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

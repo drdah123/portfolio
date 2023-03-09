@@ -26,7 +26,6 @@ function NavBar() {
       }
       if (window.scrollY > 50) {
         setScrolledBG(true);
-        console.log('scrolledBG is true');
       } else {
         setScrolledBG(false);
         setScrolled(true);
