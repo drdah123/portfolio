@@ -19,6 +19,6 @@ $ npm install
 $ npm start
 ```
 
-#### finally
+## finally
 
 If you're interested in working together or want to learn more about my experience and skills, feel free to check out my portfolio website at https://protofile.onrender.com/.
