@@ -4,19 +4,12 @@ const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [currentHover, setCurrentHover] = useState('');
-  const [currentHoverChanging, setCurrentHoverChanging] = useState(false);
 
   const handleHoverProj = (title) => {
-    if (currentHoverChanging) return;
     if (title) {
       setCurrentHover(title);
     } else {
-      setCurrentHoverChanging(true);
       setCurrentHover(null);
-
-      setTimeout(() => {
-        setCurrentHoverChanging(false);
-      }, 1000);
     }
   };
   return (

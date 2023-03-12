@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStateContext } from '../context/context';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import navIcon2 from '../assets/img/nav-icon2.png';
 
 export default function ProjectCard({
@@ -11,20 +11,18 @@ export default function ProjectCard({
   appUrl,
   gitUrl,
   technology,
+  isBigCarousel,
 }) {
   const { handleHoverProj } = useStateContext();
   const handleHover = () => handleHoverProj(title);
 
-  function getTechnologyColor() {
-    let color;
-    return color;
-  }
-
   return (
-    <article className={`proj-imgbx `} onClick={handleHover}>
+    <article
+      className={`proj-imgbx `}
+      onClick={isCarousel && !isBigCarousel ? handleHover : null}
+    >
       <Card>
-        <Card.Img src={imgUrl} />
-
+        <Card.Img onClick={handleHover} src={imgUrl} />
         {isCarousel ? (
           <Card.ImgOverlay>
             <Card.Title>

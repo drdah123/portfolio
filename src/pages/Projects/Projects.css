@@ -1,15 +1,34 @@
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .carousel-react-slick {
     width: 90%;
     margin-left: 5%;
   }
+  .carousel-react-slick-big img {
+    object-fit: cover;
+    height: 50vh;
+  }
+  .carousel-react-slick-big {
+    width: 100% !important;
+  }
+}
+.carousel-react-slick img {
+  object-fit: cover;
+  height: 100px;
+}
+.carousel-react-slick-big {
+  width: 75%;
+  margin: 0 auto;
+}
+.carousel-react-slick-big img {
+  object-fit: cover;
+  height: 75vh;
 }
 .slick-dots li button:before {
   color: var(--Aqua-color);
   opacity: 1;
 }
 .slick-dots {
-  top: -7.5%;
+  top: -30.5%;
   height: fit-content;
 }
 
@@ -176,7 +195,14 @@
 .card-details-proj .col .card {
   padding: -200px !important;
 }
-
+.card-details-proj .col {
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+.card-details-proj .col .card .card-img {
+  width: 105%;
+  margin: -5px;
+}
 @media (max-width: 640px) {
   .card-details-proj {
     width: 100% !important;
@@ -259,8 +285,9 @@
   width: 100%;
   text-overflow: clip;
 }
-.card-img {
-  width: 100%;
+.proj-imgbx .card .card-img {
+  width: 101%;
+  margin: -2px -1px 0;
 }
 
 .btn-change-projects-display button {

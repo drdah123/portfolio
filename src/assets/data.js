@@ -24,6 +24,7 @@ import Carousel from '../components/CarouselReactSlick';
 import agileProjectMangement from './pdf/agile project mangement.jpeg';
 import reactSlick from './img2/react-slick.png';
 import basicPortfolio from './img2/basicPortfolio.png';
+import SwiperJS from './img2/SwiperJS.png';
 
 export const certifications = [
   {
@@ -341,6 +342,16 @@ export const contributionProjects = [
     technology: [],
     appUrl: '',
     gitUrl: 'https://github.com/akiran/react-slick/pull/2225',
+  },
+  {
+    name: 'Swiper JS',
+    imgUrl: SwiperJS,
+    title: 'Swiper JS carousel',
+    description:
+      'it is react library to make grate carousel for React, Element, Vue and basic JS with feature like Loop, autoplay, lazyLoad etc... . I fixed margin right to equal 0 and click last slides by pagination with loop mode and slidesPerView more than 2',
+    technology: [],
+    appUrl: '',
+    gitUrl: 'https://github.com/nolimits4web/swiper/pull/6475',
   },
 ];
 
