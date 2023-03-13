@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { ArrowDown } from 'react-bootstrap-icons';
+import {
+  ArrowDown,
+  BookFill,
+  Fingerprint,
+  FlagFill,
+  InfoCircleFill,
+} from 'react-bootstrap-icons';
 import headerImg from '../../assets/img/header-img.svg';
 import BannerText from '../../components/BannerText';
 import Stars from '../../components/Stars/Stars';
@@ -11,7 +17,6 @@ import { useRef } from 'react';
 
 const Banner = () => {
   const [text, setText] = useState('');
-  const [textCv, setTextCv] = useState('');
   const [isVisible, setVisibility] = useState(false);
   const refBanner = useRef();
 
@@ -21,12 +26,23 @@ const Banner = () => {
     'open source contributor',
   ];
   const cvRotate = [
-    'simple guy want to explore and learn a new things about web development',
-    'My old is 24',
-    ' I am living in Saudi Arabia ',
-    'I started learning in 3/2022',
-    'I Learned many things about Javascript,Typescript, React , agile method, and open source projects ',
-    'And some of ui ux design, Web3, React native, Flutter, PHP',
+    <p>
+      {' '}
+      <Fingerprint /> simple guy want to explore and learn a new things about
+      web development
+    </p>,
+    <p>
+      {' '}
+      <InfoCircleFill /> My old is 24 and I am living in Saudi Arabia old is 24
+    </p>,
+    <p>
+      <FlagFill /> I started learning in 3/2022{' '}
+    </p>,
+    <p>
+      <BookFill /> I Learned many things about Javascript, Typescript, React ,
+      Agile method, open source projects and little of Angular, Vue, Solid, UI
+      UX design, Web3, React native, Flutter, and PHP
+    </p>,
   ];
   useVisibility(refBanner, setVisibility);
   return (
@@ -53,14 +69,7 @@ const Banner = () => {
                     setText={setText}
                   />
                 </h1>
-                <p>
-                  <BannerText
-                    toRotate={cvRotate}
-                    text={textCv}
-                    setText={setTextCv}
-                    speed={50}
-                  />
-                </p>
+                {cvRotate}
                 <Link to="/contact" className="lets-connect">
                   lets connect <ArrowDown color="#753aa2" size={29} />
                 </Link>

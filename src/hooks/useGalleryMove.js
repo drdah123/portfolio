@@ -33,11 +33,11 @@ function useGalleryMove(
             rowNum * dividedHeight + container.top + 20 &&
           getOffset(refPosition).top >= rowNum * dividedHeight + container.top;
 
-        let num = getOffset(refPosition).left - translate[index].x;
+        let num = refPosition.left - translate[index].x;
 
         return !isRowNum
           ? item
-          : getOffset(refPosition).left <= container.left
+          : refPosition.left <= container.left
           ? (item.x = dividedWidth * 2 - num + container.left)
           : (item.x -= dividedWidth);
       });
@@ -67,22 +67,25 @@ function useGalleryMove(
       }, 2500);
       setTimeout(() => {
         horizontallyMove(2);
-      }, 7500);
-      setTimeout(() => {
-        horizontallyMove(4);
-      }, 12500);
+      }, 6000);
       setTimeout(() => {
         horizontallyMove(3);
+      }, 10000);
+      setTimeout(() => {
+        horizontallyMove(4);
+      }, 15000);
+      setTimeout(() => {
+        horizontallyMove(4);
       }, 17500);
       setTimeout(() => verticalMove(1), 1000);
       setTimeout(() => verticalMove(2), 4000);
-      setTimeout(() => verticalMove(3), 10000);
-      setTimeout(() => verticalMove(1), 15000);
+      setTimeout(() => verticalMove(3), 8000);
+      setTimeout(() => verticalMove(1), 12000);
     }
-    // setTimOfMovement();
-    // const setI = setInterval(() => {
-    //   setTimOfMovement();
-    // }, 20000);
+    setTimOfMovement();
+    setInterval(() => {
+      setTimOfMovement();
+    }, 20000);
 
     function verticalMove(col) {
       let colNum = col - 1;
