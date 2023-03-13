@@ -29,7 +29,7 @@ function useGalleryMove(
         let refPosition = refUl.current[index].current.getBoundingClientRect();
 
         let isRowNum =
-          getOffset(refPosition).top <=
+          getOffset(refPosition).top - 20 <=
             rowNum * dividedHeight + container.top + 20 &&
           getOffset(refPosition).top >= rowNum * dividedHeight + container.top;
 
@@ -75,7 +75,7 @@ function useGalleryMove(
         horizontallyMove(4);
       }, 15000);
       setTimeout(() => {
-        horizontallyMove(4);
+        horizontallyMove(5);
       }, 17500);
       setTimeout(() => verticalMove(1), 1000);
       setTimeout(() => verticalMove(2), 4000);
@@ -95,14 +95,14 @@ function useGalleryMove(
         let num = getOffset(refPosition).top - translate[index].y;
 
         let isColNum =
-          getOffset(refPosition).left + 5 >=
+          getOffset(refPosition).left - 20 >=
             colNum * dividedWidth + container.left &&
           getOffset(refPosition).left <=
             colNum * dividedWidth + container.left + 20;
 
         return !isColNum
           ? item
-          : getOffset(refPosition).top - 10 <= container.top
+          : getOffset(refPosition).top - 20 <= container.top + 20
           ? (item.y = dividedHeight * 4 - num + container.top)
           : (item.y -= dividedHeight);
       });
