@@ -17,7 +17,7 @@ function SkillsBio() {
         <h3>I love building stuff </h3>
         <ul className="skill-bio-list">
           <li className="skill-bio-list-item-goal">
-            My goal is to be one of 10 the best programmers in all the history
+            My goal is to become a good developer
           </li>
           <li className="skill-bio-list-item-love">
             also I love learn or explore a new new things

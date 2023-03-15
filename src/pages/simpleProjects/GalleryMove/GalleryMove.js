@@ -3,6 +3,7 @@ import { projectsFrontend, fullStackProjects } from '../../../assets/data';
 import useGalleryMove from '../../../hooks/useGalleryMove';
 import './GalleryMove.css';
 import useVisibility from '../../../hooks/useVisibility';
+import { Col } from 'react-bootstrap';
 
 function GalleryMove() {
   let createRefMap = [];
@@ -24,13 +25,14 @@ function GalleryMove() {
     for (let i = 0; i < projects.length; i++) {
       setItemsArray((prevArr) => [
         ...prevArr,
-        <div
+        <Col
+          xs={4}
           ref={refUl.current[i]}
-          className="gallery-move-list col-md-4"
+          className="gallery-move-list"
           key={projects[i].title}
         >
           <img src={projects[i].imgUrl} alt="" />
-        </div>,
+        </Col>,
       ]);
       setTranslate((prevNums) => [...prevNums, { y: 0, x: 0 }]);
     }
