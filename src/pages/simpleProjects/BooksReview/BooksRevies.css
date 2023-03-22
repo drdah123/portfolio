@@ -1,11 +1,12 @@
 .wrap {
   display: flex;
   gap: 0.5rem;
+  width: 80vw;
   max-width: 550px;
   height: 500px;
   overflow-y: hidden;
   color: #000;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .strip {
@@ -32,19 +33,19 @@
   flex: 100%;
 }
 
-.one {
+.strip.one {
   background: khaki;
 }
-.two {
+.strip.two {
   background: lightcoral;
 }
-.three {
+.strip.three {
   background: peru;
 }
-.four {
+.strip.four {
   background: wheat;
 }
-.five {
+.strip.five {
   background: tan;
 }
 

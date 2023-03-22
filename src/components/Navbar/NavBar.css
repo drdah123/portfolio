@@ -7,14 +7,19 @@ nav.navbar {
   top: -20%;
   z-index: 9999;
   text-align: center;
-
   transition: 0.5s linear;
 }
+nav.navbar.sm-BG {
+  background-color: #000;
+}
+
 nav.navbar .navbar-brand {
   width: auto;
   margin-right: 40px;
 }
-
+/* .container {
+  position: relative;
+} */
 nav.navbar.scrolled {
   top: 0;
 }
@@ -275,6 +280,29 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 .glowing-btn:hover:after {
   opacity: 1;
+}
+.tubelight {
+  position: absolute;
+  top: 0px;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.5s linear;
+  z-index: 10;
+}
+.light-ray {
+  position: absolute;
+  left: -30%;
+  top: 5px;
+  width: 160%;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3) -50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  clip-path: polygon(5% 100%, 25% 0px, 75% 0px, 95% 100%);
+  pointer-events: none;
 }
 
 @keyframes faulty-flicker {

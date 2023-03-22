@@ -12,23 +12,6 @@ function BooksReview() {
   const fifth = useRef();
 
   useEffect(() => {
-    let elementArr = [
-      first.current.children[1],
-      second.current.children[1],
-      third.current.children[1],
-      forth.current.children[1],
-      fifth.current.children[1],
-      first.current.children[2],
-      second.current.children[2],
-      third.current.children[2],
-      forth.current.children[2],
-      fifth.current.children[2],
-      first.current.children[3],
-      second.current.children[3],
-      third.current.children[3],
-      forth.current.children[3],
-      fifth.current.children[3],
-    ];
     gsap.to(
       [
         first.current,

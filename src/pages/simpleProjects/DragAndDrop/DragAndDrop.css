@@ -32,7 +32,7 @@
 }
 
 .drop_card {
-  width: 360px;
+  width: 22.5rem;
   justify-content: space-between;
   padding: 0.75rem 1.25rem.75rem 0.75rem;
   background-color: var(--first-color-lighten);

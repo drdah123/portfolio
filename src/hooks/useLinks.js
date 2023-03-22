@@ -17,6 +17,11 @@ function useLinks(refHr, refMenu, setActiveLink) {
       refHr.current.style.left = `${
         refMenu.current.querySelectorAll('a')[0].offsetLeft
       }px`;
+      console.log(
+        "🚀 ~ file: useLinks.js:19 ~ useEffect ~ refMenu.current.querySelectorAll('a')[0].offsetLeft:",
+        refMenu.current.querySelectorAll('a')[0].offsetLeft
+      );
+
       refHr.current.style.width = `${
         refMenu.current.querySelectorAll('a')[0].offsetWidth
       }px`;

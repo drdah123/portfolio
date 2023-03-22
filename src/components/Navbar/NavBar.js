@@ -12,6 +12,7 @@ function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(true);
   const [scrolledBG, setScrolledBG] = useState(false);
+  const [navbarBG, setNavbarBG] = useState(false);
   const refMenu = useRef();
   const refHr = useRef();
 
@@ -45,7 +46,7 @@ function NavBar() {
         expand="lg"
         className={`${scrolled ? 'scrolled ' : ''} ${
           scrolledBG ? 'scrolledBG' : ''
-        }`}
+        } ${navbarBG ? 'sm-BG' : ''}`}
       >
         <Container>
           <Navbar.Brand>
@@ -55,12 +56,17 @@ function NavBar() {
               </Link>
             </h1>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle
+            onClick={() => setNavbarBG((prev) => !prev)}
+            aria-controls="basic-navbar-nav"
+          >
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto" ref={refMenu}>
-              <hr className="proj-choose-icon-active-link" ref={refHr} />
+              <div className="tubelight" ref={refHr}>
+                <div className="light-ray"></div>
+              </div>
               <Link
                 to="/skills"
                 className={`nav-link 
