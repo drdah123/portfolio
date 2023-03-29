@@ -41,6 +41,7 @@ export default function ProjectCard({
                   className={`proj-card-category-item ${
                     i % 2 === 0 ? 'proj-card-category-item-bg' : ''
                   }`}
+                  key={i}
                 >
                   {item}
                 </Button>

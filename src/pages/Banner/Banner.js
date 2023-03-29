@@ -25,7 +25,7 @@ const Banner = () => {
     'Full stack developer',
     'open source contributor',
   ];
-  const cvRotate = [
+  const CV = [
     <p>
       {' '}
       <Fingerprint /> simple guy want to explore and learn a new things about
@@ -69,7 +69,7 @@ const Banner = () => {
                     setText={setText}
                   />
                 </h1>
-                {cvRotate}
+                {CV}
                 <Link to="/contact" className="lets-connect">
                   lets connect <ArrowDown color="#753aa2" size={29} />
                 </Link>

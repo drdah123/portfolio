@@ -20,10 +20,13 @@ const Projects = () => {
   const refProjChosen = useRef();
   const refHr = useRef();
   const [isVisible, setIsVisibility] = useState(false);
+  // to make sure that hr appear above button
+  const [isButtonVisible, setIsButtonVisibility] = useState(false);
   const [isCarousel, setIsCarousel] = useState(false);
   const refProjects = useRef();
 
   useVisibility(refProjects, setIsVisibility);
+  useVisibility(refProjChosen, setIsButtonVisibility);
 
   const handleReact = (type) => {
     filterReactProject(type);
@@ -44,7 +47,7 @@ const Projects = () => {
         refProjChosen.current.querySelectorAll('button')[2].offsetLeft - 10
       }px`;
     }
-  }, [currentProject]);
+  }, [currentProject, isButtonVisible]);
 
   return (
     <section

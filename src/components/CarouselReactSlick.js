@@ -45,6 +45,7 @@ const Carousel = ({ projects, isCarousel }) => {
             {...settings}
             asNavFor={refFirstSlide.current}
             ref={refSecondSlide}
+            focusOnSelect
           >
             {projects.map((item) => (
               <React.Fragment key={item.title}>

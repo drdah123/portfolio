@@ -46,7 +46,7 @@ const BannerText = ({
   return (
     <>
       {emptyContent ? 'If God ' : null}
-      <label className={`rotate-size-${textSize || 0}`}>{text}</label>
+      <label className={`rotate-size-${textSize ? 0 : ''}`}>{text}</label>
     </>
   );
 };
