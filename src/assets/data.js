@@ -25,6 +25,7 @@ import agileProjectMangement from './pdf/agile project mangement.jpeg';
 import reactSlick from './img2/react-slick.png';
 import basicPortfolio from './img2/basicPortfolio.png';
 import SwiperJS from './img2/SwiperJS.png';
+import hsoubAcademy from './pdf/hsoubAcademy.png';
 
 export const certifications = [
   {
@@ -89,6 +90,13 @@ export const certifications = [
     date: 'Achieved Jan 11, 2023',
     img: agileProjectMangement,
     url: 'https://coursera.org/share/e800acb6adc68d14186a00ea07bcb7cf',
+  },
+  {
+    name: 'hsoub academy',
+    degree: 'without degree',
+    date: 'Achieved April 8, 2023',
+    img: hsoubAcademy,
+    url: 'https://academy.hsoub.com/certificate/UNC7W7J8K45VCSVY9AFUMRL79.pdf',
   },
 ];
 
