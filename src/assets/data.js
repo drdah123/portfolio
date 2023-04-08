@@ -29,6 +29,13 @@ import hsoubAcademy from './pdf/hsoubAcademy.png';
 
 export const certifications = [
   {
+    name: 'hsoub academy',
+    degree: 'without degree',
+    date: 'Achieved April 8, 2023',
+    img: hsoubAcademy,
+    url: 'https://academy.hsoub.com/certificate/UNC7W7J8K45VCSVY9AFUMRL79.pdf',
+  },
+  {
     name: 'Introduction to Front-End Development ',
     degree: '99%',
     date: 'Achieved Dec 25 2022',
@@ -90,13 +97,6 @@ export const certifications = [
     date: 'Achieved Jan 11, 2023',
     img: agileProjectMangement,
     url: 'https://coursera.org/share/e800acb6adc68d14186a00ea07bcb7cf',
-  },
-  {
-    name: 'hsoub academy',
-    degree: 'without degree',
-    date: 'Achieved April 8, 2023',
-    img: hsoubAcademy,
-    url: 'https://academy.hsoub.com/certificate/UNC7W7J8K45VCSVY9AFUMRL79.pdf',
   },
 ];
 
