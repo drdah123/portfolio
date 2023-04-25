@@ -241,7 +241,7 @@ export const angularProject = [
 
     imgUrl: lucidClone,
     technology: [],
-    appUrl: 'https://lustrous-torrone-884988.netlify.app/',
+    appUrl: 'https://lucid-angular.onrender.com/',
     gitUrl: 'https://github.com/drdah123/lucid-angular/tree/main',
   },
 ];
@@ -253,7 +253,7 @@ export const VueProject = [
 
     imgUrl: lucidClone,
     technology: [],
-    appUrl: 'https://lucid-vue.onrender.com/',
+    appUrl: 'https://lucid-vue.netlify.app/',
     gitUrl: 'https://github.com/drdah123/lucid-vue/tree/main',
   },
 ];

@@ -12,7 +12,7 @@ function GalleryMove() {
   const [translate, setTranslate] = useState([]);
   const [isVisible, setVisibility] = useState(false);
 
-  let projects = [...projectsFrontend, ...fullStackProjects];
+  let projects = useMemo(() => [...projectsFrontend, ...fullStackProjects], []);
   const refUl = useRef(createRefMap);
   const containerRef = useRef(null);
 
@@ -50,7 +50,7 @@ function GalleryMove() {
   return (
     <div
       ref={containerRef}
-      className="gallery-move-container row"
+      className="gallery-move-container row mb-5"
       id="galleryMove"
     >
       {itemsArray}

@@ -24,7 +24,6 @@ const Contact = () => {
       .then(
         () => {
           alert('your message sent');
-          // window.location.reload(false);
           setButtonText('sent');
           setIsSent(true);
         },

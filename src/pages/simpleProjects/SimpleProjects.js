@@ -8,9 +8,9 @@ import CreditCard from './CreditCard/CreditCard';
 function SimpleProjects() {
   return (
     <div className="simple-projects-container">
+      <GalleryMove />
       <BooksReview />
       <DragAndDrop />
-      <GalleryMove />
       <ProductCardCycle />
       <CreditCard />
     </div>
