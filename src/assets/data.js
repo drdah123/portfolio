@@ -26,6 +26,7 @@ import reactSlick from './img2/react-slick.png';
 import basicPortfolio from './img2/basicPortfolio.png';
 import SwiperJS from './img2/SwiperJS.png';
 import hsoubAcademy from './pdf/hsoubAcademy.png';
+import travel from './img2/travel-template.png';
 
 export const certifications = [
   {
@@ -118,6 +119,16 @@ export const projectsFrontend = [
     appUrl: '',
     class: 'basic',
     gitUrl: 'https://github.com/drdah123/portfolio',
+  },
+  {
+    title: 'Travel UI',
+    description:
+      'applied figma template for Travel from Frontend Senior on telegram',
+    imgUrl: travel,
+    technology: ['Sass', 'Swiper'],
+    appUrl: 'https://travel-z4fo.onrender.com',
+    class: 'basic',
+    gitUrl: 'https://github.com/drdah123/travel-template',
   },
   {
     title: 'Lucid motors clone',
