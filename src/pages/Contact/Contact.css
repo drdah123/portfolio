@@ -4,7 +4,7 @@
     var(--DeepCarminePink-color) -5.91%,
     var(--BlueyPurple-color) 111.58%
   );
-  padding: 60px 0 200px 0;
+  padding: 8rem 0;
 }
 
 .contact img {
@@ -31,12 +31,64 @@
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
   caret-color: var(--DeepCarminePink-color);
+  box-shadow: 20px 20px 7px black;
+}
+section.contact .container,
+.container-md,
+.container-sm {
+  max-width: 90vw;
+}
+.social-icon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -25px;
+}
+.social-icon-footer a {
+  width: 42px;
+  height: 42px;
+  background: rgb(54, 54, 54);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 10px 10px 10px black;
+  transition: 0.5s;
 }
 
+.social-icon-footer a::before {
+  content: '';
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon-footer a:hover::before {
+  transform: scale(1);
+}
+
+.social-icon-footer a img {
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon-footer a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
+}
 .contact form input:focus,
 .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: var(--ChineseBlack-color);
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.2);
+  box-shadow: 10px 10px 7px black;
 }
 
 .contact form input::placeholder,
@@ -62,6 +114,7 @@
   border-radius: 15px;
   position: relative;
   transition: 0.3s ease-in-out;
+  box-shadow: 11px 11px 5px black;
 }
 
 .contact form button span {
@@ -212,7 +265,7 @@ footer {
 }
 
 footer img {
-  width: 26%;
+  width: 200px;
 }
 
 footer p {

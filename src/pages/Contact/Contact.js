@@ -38,27 +38,26 @@ const Contact = () => {
       <section className="contact" id="connect">
         <Container>
           <Row>
-            <Col md={6}>
+            <Col md={6} className="d-flex">
               <img src={contactImg} alt="Contact us" />
             </Col>
-            <Col md={6}>
-              <h2>Get in touch</h2>
+            <Col md={6} className="form-container">
               <form ref={formRef} onSubmit={sendEmail}>
                 <Row>
-                  <Col className="px-1">
+                  <Col>
                     <input
                       type="text"
                       placeholder="First name"
                       name="firstname"
                     />
-                    <Col className="px-1">
+                    <Col>
                       <input
                         type="text"
                         placeholder="Last name"
                         name="lastName"
                       />
                     </Col>
-                    <Col className="px-1">
+                    <Col>
                       <input
                         type="email"
                         placeholder="Email"
@@ -66,7 +65,7 @@ const Contact = () => {
                         name="email"
                       />
                     </Col>
-                    <Col className="px-1">
+                    <Col>
                       <input type="tel" placeholder="Phone" name="Phone" />
                     </Col>
                     <Col>
