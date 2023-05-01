@@ -182,6 +182,14 @@
 .d-invisible-proj {
   visibility: hidden;
 }
+.bg-of-card-details-proj {
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+}
 .card-details-proj {
   display: none;
   z-index: 10000;
@@ -285,9 +293,8 @@
   width: 100%;
   text-overflow: clip;
 }
-.proj-imgbx .card .card-img {
-  width: 101%;
-  margin: -2px -1px 0;
+.proj-imgbx.card {
+  border: none;
 }
 
 .btn-change-projects-display button {

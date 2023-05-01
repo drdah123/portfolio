@@ -137,8 +137,8 @@ const Projects = () => {
                         </div>
                       ) : null}
                     </div>
-                    {key.component ? (
-                      key.component(isCarousel)
+                    {key.Component ? (
+                      <key.Component isCarousel={isCarousel} />
                     ) : (
                       <h3>
                         <BannerText

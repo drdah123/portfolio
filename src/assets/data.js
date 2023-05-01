@@ -422,7 +422,7 @@ export const tabKeys = [
   {
     key: 'first',
     title: 'Contributions',
-    component: (isCarousel) => {
+    Component: ({ isCarousel }) => {
       return (
         <Carousel projects={contributionProjects} isCarousel={isCarousel} />
       );
@@ -431,28 +431,28 @@ export const tabKeys = [
   {
     key: 'second',
     title: 'React JS',
-    component: (isCarousel) => {
+    Component: ({ isCarousel }) => {
       return <Carousel projects={reactProject} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'third',
     title: 'Full stack React',
-    component: (isCarousel) => {
+    Component: ({ isCarousel }) => {
       return <Carousel projects={fullStackProjects} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'forth',
     title: ' Angular JS ',
-    component: (isCarousel) => {
+    Component: ({ isCarousel }) => {
       return <Carousel projects={angularProject} isCarousel={isCarousel} />;
     },
   },
   {
     key: 'fifth',
     title: 'Vue JS',
-    component: (isCarousel) => {
+    Component: ({ isCarousel }) => {
       return <Carousel projects={VueProject} isCarousel={isCarousel} />;
     },
   },

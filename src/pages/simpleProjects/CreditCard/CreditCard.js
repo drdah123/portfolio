@@ -71,7 +71,7 @@ function CreditCard() {
   function editInput(event) {
     setStates((prevS) => ({
       ...prevS,
-      cardNumber: formatNumber(event.target.value),
+      cardNumber: event.target.value,
     }));
   }
   const formatNumber = (number) =>
@@ -349,10 +349,21 @@ function CreditCard() {
               Card Number
             </label>
             <input
-              type="number"
+              type="text"
               id="cardNumber"
+              maxLength={19}
               className="card-input__input"
-              onChange={(e) => editInput(e)}
+              onKeyUp={(e) => {
+                if (e.key === 'Backspace' || e.key === 'Delete') {
+                  editInput(e);
+                  return;
+                }
+                if (e.target.value.length === 19) return;
+                let value = e.target.value.replace(/\D/g, '').substring(0, 16);
+                value = value.replace(/(.{4})/g, '$1 ');
+                e.target.value = value;
+                editInput(e);
+              }}
               onFocus={(e) => focusInput(e)}
               onBlur={() => blurInput()}
               data-ref={0}
