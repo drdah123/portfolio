@@ -26,9 +26,17 @@ import reactSlick from './img2/react-slick.png';
 import basicPortfolio from './img2/basicPortfolio.png';
 import SwiperJS from './img2/SwiperJS.png';
 import hsoubAcademy from './pdf/hsoubAcademy.png';
+import frontendHsoub from './pdf/front-end-hsoub-academy.png';
 import travel from './img2/travel-template.png';
 
 export const certifications = [
+  {
+    name: 'hsoub academy',
+    degree: 'without degree',
+    date: 'Achieved may 20, 2023',
+    img: frontendHsoub,
+    url: 'https://academy.hsoub.com/certificate/KCGOYKO356TFV1UJK9N7DX18R.pdf',
+  },
   {
     name: 'hsoub academy',
     degree: 'without degree',
